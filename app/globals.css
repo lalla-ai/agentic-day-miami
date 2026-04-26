@@ -1146,3 +1146,406 @@ footer { background: #000; color: #fff; padding: 100px 0 40px; }
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ===========================================
+   COMPREHENSIVE RESPONSIVE OPTIMIZATION
+   =========================================== */
+
+/* iOS form zoom prevention — inputs must be 16px+ */
+.cp-input, .cp-textarea, select.cp-input {
+  font-size: 16px;
+}
+
+/* TABLET — 1024px and below */
+@media (max-width: 1024px) {
+  .section { padding: 80px 0; }
+  .cta-band { padding: 100px 0 80px; }
+  .partners-ops { padding: 80px 0; }
+  .partners-directory { padding: 80px 0; }
+
+  /* Speakers grid: 3 cols on tablets (already set at 1100px) */
+
+  /* Reduce excessive margins */
+  .partner-tier { margin-bottom: 60px; }
+  .ops-row, .ops-row-reverse { margin-bottom: 80px; }
+  .directory-tier { margin-bottom: 60px; }
+  .directory-h1 { margin-bottom: 60px; }
+}
+
+/* SMALL TABLET / LARGE PHONE — 768px and below */
+@media (max-width: 768px) {
+  /* Hero adjustments */
+  .hero { padding: 130px 0 0; }
+  .hero-content { margin-top: 0; }
+  h1.headline {
+    font-size: clamp(40px, 11vw, 72px) !important;
+    letter-spacing: -0.03em;
+  }
+  .meta-line {
+    font-size: 14px;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  .meta-line .dot { width: 5px; height: 5px; }
+
+  /* Section padding */
+  .section { padding: 60px 0; }
+  .cta-band { padding: 80px 0 60px; }
+  .stats { padding: 32px 0 60px; }
+
+  /* Section h2 */
+  .section h2 {
+    font-size: clamp(32px, 8vw, 56px) !important;
+    margin-bottom: 40px;
+    line-height: 1.0;
+  }
+
+  /* Stats — reduce huge numbers */
+  .stat-num { font-size: clamp(48px, 14vw, 80px); }
+  .stat-lbl { font-size: 16px; }
+
+  /* About */
+  .about-lead { font-size: clamp(20px, 5vw, 28px); }
+  .about-body p { font-size: 15px; }
+
+  /* Speakers grid stays at 2 (already in main media query) */
+  .speaker-name { font-size: 16px; }
+  .speaker-title { font-size: 12px; }
+
+  /* Marquee — slow down and shrink */
+  .marquee-wrap { padding: 32px 0; }
+  .marquee span { font-size: clamp(28px, 8vw, 44px); gap: 32px; }
+  .marquee { gap: 32px; }
+
+  /* Agenda */
+  .agenda-row { padding: 24px 0; }
+  .agenda-time { font-size: 16px; }
+  .agenda-title { font-size: 18px; }
+  .agenda-desc, .agenda-speakers { font-size: 13px; }
+
+  /* Tickets */
+  .tickets {
+    padding: 40px 24px;
+    border-radius: 24px;
+    margin: 40px 0;
+  }
+  .tickets h2 {
+    font-size: clamp(28px, 7vw, 40px) !important;
+    margin-bottom: 12px !important;
+  }
+  .tickets-sub { font-size: 16px; margin-bottom: 32px; }
+  .ticket { padding: 22px; }
+  .ticket-name { font-size: 17px; }
+  .ticket-desc { font-size: 13px; }
+
+  /* Events */
+  .event {
+    padding: 28px;
+    border-radius: 24px;
+    min-height: 380px !important;
+  }
+  .event-title { font-size: clamp(26px, 7vw, 36px); }
+  .event-meta { font-size: 12px; gap: 8px; }
+  .event-cta { bottom: 28px; right: 28px; font-size: 11px; }
+  .event-tag { font-size: 10px; padding: 6px 12px; }
+
+  /* Partners */
+  .partners-subnav {
+    padding: 6px;
+    margin-bottom: 48px;
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .partners-subnav::-webkit-scrollbar { display: none; }
+  .partners-subnav a {
+    padding: 10px 16px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  .partner-tier-title { font-size: 11px; letter-spacing: 0.15em; }
+
+  /* Get involved cards */
+  .involved-card { padding: 28px; aspect-ratio: 5 / 4; }
+  .involved-headline { font-size: clamp(24px, 7vw, 32px); }
+  .involved-cta { padding: 12px 18px 12px 20px; font-size: 13px; }
+
+  /* Charity */
+  .charity { padding: 40px 24px; border-radius: 24px; }
+  .charity h3 { font-size: clamp(22px, 6vw, 32px); }
+  .charity-eyebrow { font-size: 11px; }
+
+  /* Final CTA */
+  .cta-band h2 { font-size: clamp(40px, 12vw, 80px) !important; }
+  .cta-band p { font-size: 17px; }
+
+  /* Footer */
+  footer { padding: 60px 0 32px; }
+  .footer-cols { margin-bottom: 60px; gap: 32px; }
+  .footer-col h4 { font-size: 14px; margin-bottom: 16px; }
+  .footer-col a { font-size: 16px; padding: 6px 0; }
+  .footer-bottom { gap: 24px; }
+  .footer-brand-block .logo-block img { height: 56px; padding: 8px 12px; }
+  .footer-meta { font-size: 12px; }
+
+  /* Buttons — bigger tap targets */
+  .btn-primary {
+    padding: 16px 26px 16px 28px;
+    font-size: 15px;
+    width: auto;
+  }
+  .btn-light {
+    padding: 14px 22px 14px 24px;
+    font-size: 14px;
+  }
+
+  /* Community partner form */
+  .community-partner-section { padding: 60px 0; }
+  .cp-intro-text h2 { font-size: clamp(28px, 8vw, 44px); }
+  .cp-lead { font-size: 16px; }
+  .cp-form-wrap h2 { font-size: clamp(28px, 7vw, 40px); }
+  .cp-eligibility { padding-left: 16px; margin: 20px 0 40px; }
+  .cp-eligibility li { font-size: 14px; }
+  .cp-field { margin-bottom: 28px; }
+  .cp-label { font-size: 15px; margin-bottom: 12px; }
+  .cp-input { padding: 14px 14px; }
+  .cp-radio, .cp-checkbox {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  /* Partners page */
+  .partners-hero {
+    padding: 130px 0 40px;
+  }
+  .partners-hero-content { padding-bottom: 40px; }
+  .partners-hero-title { font-size: clamp(40px, 11vw, 72px); }
+  .partners-hero-eyebrow { font-size: 14px; margin-bottom: 24px; }
+  .partners-hero-sub { font-size: 14px; margin-bottom: 32px; }
+  .partners-hero-strip { gap: 12px; margin-top: 40px; }
+  .strip-card { aspect-ratio: 3/4; border-radius: 12px; }
+
+  .ops-title { font-size: clamp(32px, 8vw, 52px); margin-bottom: 24px; }
+  .ops-eyebrow { font-size: 14px; margin-bottom: 16px; }
+  .ops-body { font-size: 15px; }
+  .ops-visual { aspect-ratio: 5/4; border-radius: 20px; }
+
+  .partners-exhibit { padding: 80px 0 0; }
+  .exhibit-title { font-size: clamp(40px, 11vw, 72px); margin-bottom: 24px; }
+  .exhibit-eyebrow { font-size: 14px; margin-bottom: 24px; }
+  .exhibit-sub { font-size: 14px; margin-bottom: 32px; }
+  .exhibit-strip { gap: 12px; margin-top: 60px; padding: 0 20px; }
+  .strip-tile { border-radius: 12px; }
+
+  .directory-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-bottom: 40px;
+    justify-content: flex-start;
+  }
+  .directory-tabs::-webkit-scrollbar { display: none; }
+  .directory-tab {
+    padding: 14px 20px;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .directory-h1 {
+    font-size: clamp(40px, 11vw, 64px);
+    margin-bottom: 48px;
+  }
+  .directory-tier-title {
+    font-size: 14px;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+  }
+  .directory-grid { gap: 16px; }
+  .directory-cell { padding: 16px; aspect-ratio: 4/3; }
+  .directory-cta {
+    padding: 40px 24px;
+    margin-top: 48px;
+    border-radius: 20px;
+  }
+  .directory-cta h3 { font-size: clamp(22px, 6vw, 32px); }
+  .directory-cta p { font-size: 15px; margin-bottom: 24px; }
+}
+
+/* PHONE — 480px and below */
+@media (max-width: 480px) {
+  /* Compact wrap padding */
+  .wrap { padding: 0 16px; }
+
+  /* Hero — don't let headline cramp */
+  .hero { padding: 120px 0 0; }
+  h1.headline { font-size: clamp(36px, 12vw, 56px) !important; }
+  .meta-line {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+  }
+  .meta-line .dot { display: none; }
+
+  /* Sections */
+  .section { padding: 50px 0; }
+  .section-eyebrow { font-size: 12px; margin-bottom: 12px; }
+
+  /* Marquee */
+  .marquee span { font-size: clamp(24px, 8vw, 36px); }
+
+  /* Agenda layout reflow already happens at 700px */
+  .agenda-row { gap: 6px; }
+  .agenda-time {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .agenda-title { font-size: 17px; }
+
+  /* Speakers — keep at 2 columns even on narrow */
+  .speakers-grid { gap: 12px; }
+  .speaker-name { font-size: 14px; }
+  .speaker-title { font-size: 11px; line-height: 1.3; }
+
+  /* Stats — single column, centered */
+  .stats-grid { gap: 32px; }
+  .stat-num { font-size: clamp(42px, 16vw, 64px); }
+  .stat-lbl { font-size: 14px; }
+
+  /* Tickets — even tighter */
+  .tickets {
+    padding: 32px 20px;
+    border-radius: 20px;
+    margin: 32px 0;
+  }
+  .tickets-grid { gap: 12px; }
+  .ticket { padding: 18px; }
+  .ticket-name { font-size: 16px; }
+
+  /* Events */
+  .event { padding: 24px; min-height: 340px !important; }
+  .event-cta { bottom: 24px; right: 24px; }
+
+  /* Get involved */
+  .involved-card { padding: 24px; }
+  .involved-headline { font-size: clamp(22px, 8vw, 28px); }
+
+  /* Form */
+  .cp-radio-letter { width: 24px; height: 24px; font-size: 11px; }
+  .cp-actions { flex-direction: column; }
+  .cp-actions .btn-primary,
+  .cp-actions .btn-light { width: 100%; justify-content: center; }
+
+  /* Partner CTA cards */
+  .directory-cta {
+    padding: 32px 20px;
+    border-radius: 16px;
+  }
+
+  /* Footer */
+  .footer-bottom { flex-direction: column; align-items: flex-start !important; gap: 24px; }
+  .footer-meta { align-items: flex-start; }
+
+  /* Charity */
+  .charity { padding: 32px 20px; border-radius: 20px; }
+
+  /* Buttons stack on narrow screens */
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-cta-row .btn-primary,
+  .hero-cta-row .btn-light {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+}
+
+/* VERY NARROW — 360px and below (small Android phones) */
+@media (max-width: 360px) {
+  .wrap { padding: 0 14px; }
+  h1.headline { font-size: clamp(30px, 12vw, 44px) !important; }
+  .section h2 { font-size: clamp(26px, 8vw, 40px) !important; }
+  .partners-hero-title,
+  .exhibit-title { font-size: clamp(32px, 11vw, 56px); }
+}
+
+/* LANDSCAPE PHONES */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { padding: 100px 0 0; }
+  h1.headline { font-size: clamp(36px, 7vw, 64px) !important; }
+  .fluid { height: 200px; min-height: 180px; margin-top: 32px; }
+}
+
+/* HIGH-DPI / RETINA — sharper canvas rendering already handled in MeshWave.tsx */
+
+/* MOBILE NAV — hamburger menu */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  margin-left: auto;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  margin: 4px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-toggle.open .nav-toggle-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav-toggle.open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+.nav-toggle.open .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.nav-mobile-menu {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(245, 243, 238, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 100px 32px 60px;
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.nav-mobile-menu.open {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.nav-mobile-menu a {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  padding: 16px 24px;
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+.nav-mobile-menu a:hover { background: rgba(14, 17, 23, 0.05); }
+.nav-mobile-menu .btn-primary {
+  margin-top: 24px;
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .nav-toggle { display: block; }
+  nav.top .pill .btn-primary { display: none; }
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.nav-open { overflow: hidden; }

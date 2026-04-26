@@ -32,7 +32,7 @@ export default function Speakers() {
               <div className="speaker-photo">
                 <Image
                   src={`/images/speakers/${s.img}`}
-                  alt={s.name}
+                  alt={`${s.name} — ${s.title} — Agentic Day Miami speaker`}
                   width={400}
                   height={400}
                 />
