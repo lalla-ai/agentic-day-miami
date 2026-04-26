@@ -7,6 +7,7 @@ import Marquee from "@/components/Marquee";
 import Agenda from "@/components/Agenda";
 import EventsSeries from "@/components/EventsSeries";
 import Partners from "@/components/Partners";
+import CommunityPartnerForm from "@/components/CommunityPartnerForm";
 import Charity from "@/components/Charity";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -24,6 +25,7 @@ export default function HomePage() {
       <Agenda />
       <EventsSeries />
       <Partners />
+      <CommunityPartnerForm />
       <Charity />
       <FinalCTA />
       <Footer />

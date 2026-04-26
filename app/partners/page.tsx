@@ -1,21 +1,28 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
-import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
+import RevealOnScroll from "@/components/RevealOnScroll";
+import PartnersHero from "@/components/PartnersHero";
+import PartnersOpportunities from "@/components/PartnersOpportunities";
+import PartnersExhibit from "@/components/PartnersExhibit";
+import PartnersDirectory from "@/components/PartnersDirectory";
 
 export const metadata: Metadata = {
   title: "Partners | Agentic Day Miami",
-  description: "Our sponsors, community partners, and media partners for Agentic Day Miami — May 4, 2026.",
+  description:
+    "Position your brand at the forefront of the Agentic Infrastructure Economy. Sponsorship, media, and ecosystem partnership opportunities for Agentic Day Miami.",
 };
 
 export default function PartnersPage() {
   return (
     <>
       <Nav />
-      <main style={{ paddingTop: "80px" }}>
-        <Partners />
-      </main>
+      <PartnersHero />
+      <PartnersOpportunities />
+      <PartnersExhibit />
+      <PartnersDirectory />
       <Footer />
+      <RevealOnScroll />
     </>
   );
 }
