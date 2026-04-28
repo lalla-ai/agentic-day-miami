@@ -10,6 +10,7 @@ import Partners from "@/components/Partners";
 import CommunityPartnerForm from "@/components/CommunityPartnerForm";
 import Charity from "@/components/Charity";
 import FinalCTA from "@/components/FinalCTA";
+import AttendedBy from "@/components/AttendedBy";
 import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
@@ -28,6 +29,7 @@ export default function HomePage() {
       <CommunityPartnerForm />
       <Charity />
       <FinalCTA />
+      <AttendedBy />
       <Footer />
       <RevealOnScroll />
     </>
