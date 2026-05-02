@@ -7,68 +7,100 @@ export default function Agenda() {
 
         <div>
           <div className="agenda-row reveal">
-            <div className="agenda-time">12:30 PM</div>
+            <div className="agenda-time">🥂 12:00 PM</div>
             <div>
-              <h3 className="agenda-title">Arrival & Institutional Networking Brunch</h3>
-              <p className="agenda-desc">Opening the day with high-level connection and curated introductions.</p>
+              <h3 className="agenda-title">Brunch</h3>
             </div>
           </div>
           <div className="agenda-row reveal">
-            <div className="agenda-time">1:30 PM</div>
+            <div className="agenda-time">🎤 1:00 PM</div>
             <div>
-              <h3 className="agenda-title">Panel: AI Infrastructure & Economics</h3>
-              <p className="agenda-desc">Direct, real-world conversation on AI infrastructure bottlenecks, compute costs, and the rise of Neo clouds. A candid look at why enterprise agent integration is slower than expected — and what it takes to unlock it.</p>
-              <p className="agenda-speakers"><strong>Featured speaker:</strong> Vishal Ganeriwala (NVIDIA DGX Cloud) <strong>· Panelist:</strong> Katie Hilborn (Regenerative Infrastructure Holdings)</p>
+              <h3 className="agenda-title">Welcome + Opening Keynote</h3>
+              <p className="agenda-speakers"><strong>Don Tapscott</strong> — Technology Thought Leader and Blockchain Expert</p>
+              <p className="agenda-speakers">Hosted by MCs <strong>Maggie Love</strong> (SheFi) and <strong>Alejandra Slatapolsky</strong> (Miami Fintech Club / Scalto)</p>
             </div>
           </div>
           <div className="agenda-row reveal">
-            <div className="agenda-time">2:20 PM</div>
+            <div className="agenda-time">🎙️ 1:30 PM</div>
             <div>
-              <h3 className="agenda-title">Panel: Agentic Agility — Avoiding Acrimony and Structuring for Success</h3>
-              <p className="agenda-speakers"><strong>Speakers:</strong> Danielle Pienaar (Verdant Management), Haymond Rankin (Cayman Finance), Jenna Peterson (Midnight Foundation), Anna Muheim (ShoreLabs)</p>
+              <h3 className="agenda-title">Panel 1: AI Infrastructure &amp; Economics</h3>
+              <p className="agenda-speakers"><strong>Moderator:</strong> Katie Hilborn — Founder &amp; MD, Regenerative Infrastructure Holdings</p>
+              <p className="agenda-speakers"><strong>Vishal Ganeriwala</strong> — Senior Director, NVIDIA DGX Cloud · <strong>Ariel Deschapell</strong> — Co-Founder &amp; CPTO, Hydra Host · <strong>Renatto Garro</strong> — CTO Digital Natives, Google Cloud / Co-Founder, Nebulai</p>
             </div>
           </div>
           <div className="agenda-row reveal">
-            <div className="agenda-time">2:50 PM</div>
+            <div className="agenda-time">🩺 2:05 PM</div>
             <div>
-              <h3 className="agenda-title">Panel: Real World Deployment of AI in Crypto</h3>
-              <p className="agenda-speakers"><strong>Speakers:</strong> Kim (Genius PR), Andrew Weiner (WEEX Labs), George Varghese (0G)</p>
+              <h3 className="agenda-title">Spotlight Talk: Agentic AI in Radiology</h3>
+              <p className="agenda-speakers"><strong>Alejandro Bugnone, MD</strong> — Founder, Total Medical Imaging / CEO, RADIN</p>
             </div>
           </div>
           <div className="agenda-row reveal">
-            <div className="agenda-time">3:20 PM</div>
+            <div className="agenda-time">⚖️ 2:20 PM</div>
             <div>
-              <h3 className="agenda-title">Connector Workshop: Breaking the Room Open</h3>
-              <p className="agenda-desc">A 20-minute reset designed to turn the room from an audience into a network. Stand-up format, rotating triads of founder + investor + operator.</p>
-              <p className="agenda-speakers"><strong>Hosted by:</strong> Andrew Weiner (COO, WEEX Labs)</p>
+              <h3 className="agenda-title">Panel 3: Agentic Agility — Avoiding Acrimony and Structuring for Success</h3>
+              <p className="agenda-speakers"><strong>Moderator:</strong> Danielle Pienaar — Web3 &amp; Blockchain Director, Verdant Management</p>
+              <p className="agenda-speakers"><strong>Haymond Rankin</strong> — Associate Director Banking, Cayman Finance · <strong>Michael Bacina</strong> — Co-Founder &amp; Attorney, NXT Law · <strong>Anna Muheim</strong> — CEO, ShoreLabs · <strong>James Knox</strong> — Managing Director, Aon</p>
             </div>
           </div>
           <div className="agenda-row reveal">
-            <div className="agenda-time">3:40 PM</div>
+            <div className="agenda-time">🤖 2:50 PM</div>
             <div>
-              <h3 className="agenda-title">Panel: The New Fintech Frontier — Stablecoins, Agentic Payment & Global Expansion</h3>
-              <p className="agenda-speakers"><strong>Moderator:</strong> Nikita Sachdev (LunaPR) <strong>· Speakers:</strong> Alejandra Slatapolsky (Miami Fintech Club), Vladislav Shevelev (Kea World), Zakaria Fahim (BDO Morocco / Hub Africa), Jairo Riveros (Paysend)</p>
+              <h3 className="agenda-title">Panel 4: Real World Deployment of AI in Crypto</h3>
+              <p className="agenda-speakers"><strong>Moderator:</strong> Andrew Weiner — COO, WEEX Labs</p>
+              <p className="agenda-speakers"><strong>Cooper Emmons</strong> — Head of Institutional Strategy, Injective Labs · <strong>Anas Roque</strong> — Meta · <strong>George Varghese</strong> — 0G · <strong>Francesco Andreoli</strong> — Director of Developer Relations, MetaMask</p>
             </div>
           </div>
           <div className="agenda-row reveal">
-            <div className="agenda-time">4:10 PM</div>
+            <div className="agenda-time">📚 3:20 PM</div>
             <div>
-              <h3 className="agenda-title">Panel: Agentic Commerce — The Future of AI-Powered Shopping</h3>
-              <p className="agenda-speakers"><strong>Speakers:</strong> Kelly H. Zou (AI4Purpose), Alex Styhar (Mindo AI), Wayne Liu (Perfect Corp.)</p>
+              <h3 className="agenda-title">WEEX Workshop</h3>
+              <p className="agenda-speakers"><strong>Andrew Weiner</strong> — COO, WEEX Labs</p>
             </div>
           </div>
           <div className="agenda-row reveal">
-            <div className="agenda-time">5:00 PM</div>
+            <div className="agenda-time">✨ 3:45 PM</div>
             <div>
-              <h3 className="agenda-title">Evening Reception & Silent Auction</h3>
-              <p className="agenda-desc">Networking in Tesla&apos;s futuristic setting, paired with a curated art auction benefiting St. Jude Children&apos;s Research Hospital.</p>
+              <h3 className="agenda-title">Founders Talk: Where Is the Agentic and Blockchain Economy Going?</h3>
+              <p className="agenda-speakers"><strong>Laura Leparulo</strong> — Founder, ETH Women · <strong>Maggie Love</strong> — Founder, SheFi · <strong>Lalla Asmaa Alaoui</strong> — Founder, allmyai.ai &amp; Agentic Day Summit</p>
             </div>
           </div>
           <div className="agenda-row reveal">
-            <div className="agenda-time">+ Bonus</div>
+            <div className="agenda-time">💸 4:10 PM</div>
             <div>
-              <h3 className="agenda-title">Complimentary Tesla Private Test Drive</h3>
-              <p className="agenda-desc">Exclusively available to Agentic Day attendees. Limited slots — advance booking required.</p>
+              <h3 className="agenda-title">Panel 6: The New Fintech Frontier — Stablecoins, Agentic Payments &amp; Global Expansion</h3>
+              <p className="agenda-speakers"><strong>Moderator:</strong> Alejandra Slatapolsky — Co-Founder, Miami Fintech Club / Co-Founder, Scalto</p>
+              <p className="agenda-speakers"><strong>Hector Clark</strong> — Director / VP Business Development, Mastercard · <strong>Vladislav Shevelev</strong> — CFO, Kea World · <strong>Zakaria Fahim</strong> — President, BDO Digital Morocco / President, Hub Africa · <strong>Jairo Riveros</strong> — President, Paysend</p>
+            </div>
+          </div>
+          <div className="agenda-row reveal">
+            <div className="agenda-time">🛒 4:40 PM</div>
+            <div>
+              <h3 className="agenda-title">Panel 7: Agentic Commerce — The Future of AI-Powered Shopping</h3>
+              <p className="agenda-speakers"><strong>Moderator:</strong> Nikita Sachdev — CEO, Luna PR</p>
+              <p className="agenda-speakers"><strong>Kelly H. Zou</strong> — CEO, AI4Purpose · <strong>Alex Styhar</strong> — CEO, Mindo AI · <strong>Wayne Liu</strong> — CGO, Perfect Corp.</p>
+            </div>
+          </div>
+          <div className="agenda-row reveal">
+            <div className="agenda-time">🔥 5:00 PM</div>
+            <div>
+              <h3 className="agenda-title">Closing Fireside: A Fireside with Yat Siu</h3>
+              <p className="agenda-speakers"><strong>Yat Siu</strong> — Co-Founder &amp; Executive Chairman, Animoca Brands</p>
+              <p className="agenda-speakers">In conversation with <strong>Megan Nilsson</strong> — Crypto Megan / Draper TV</p>
+            </div>
+          </div>
+          <div className="agenda-row reveal">
+            <div className="agenda-time">🎤 5:30 PM</div>
+            <div>
+              <h3 className="agenda-title">Closing Remarks</h3>
+              <p className="agenda-speakers"><strong>Lalla Asmaa Alaoui</strong> — Host of Agentic Day Miami</p>
+            </div>
+          </div>
+          <div className="agenda-row reveal">
+            <div className="agenda-time">🥂 5:45 PM</div>
+            <div>
+              <h3 className="agenda-title">Networking Reception</h3>
+              <p className="agenda-desc">An Exclusive Silent Auction of high-end designer pieces, in support of St. Jude Children&apos;s Research Hospital. Until 7:30 PM.</p>
             </div>
           </div>
         </div>
