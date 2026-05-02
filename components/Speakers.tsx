@@ -10,13 +10,13 @@ const speakers = [
   { name: "Katie Hilborn", title: "Founder & MD, Regenerative Infrastructure Holdings", img: "Katie_Hilborn.png" },
   { name: "Anna Muheim", title: "CEO, ShoreLabs", img: "Anna_Muheim.png" },
   { name: "Haymond Rankin", title: "Cayman Finance", img: "Haymond_Rankin.png" },
-  { name: "Laura Leparulo", title: "Cayman Finance", img: "Laura_Leparulo.png" },
+  { name: "Laura Leparulo", title: "Founder, ETH Women", img: "Laura_Leparulo.png" },
   { name: "George Varghese", title: "0G", img: "George_V.png" },
   { name: "Alex Styhar", title: "CEO, Mindo AI", img: "Alex_Styhar.png" },
   { name: "Wayne Liu", title: "CGO, Perfect Corp.", img: "Wayne_Liu.png" },
   { name: "Vladislav Shevelev", title: "CFO, Kea World", img: "Vladislav_Shevelev.png" },
   { name: "Zakaria Fahim", title: "BDO Morocco / Hub Africa", img: "Zakaria_Fahim.png" },
-  { name: "Michael Bacina", title: "0G", img: "Michael_Bacina.png" },
+  { name: "Michael Bacina", title: "Co-Founder & Attorney, NXT Law", img: "Michael_Bacina.png" },
   { name: "Daniel Reis-Faria", title: "Speaker", img: "Daniel_Reis-Faria.png" },
 ];
 
