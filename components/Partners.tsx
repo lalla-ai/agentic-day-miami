@@ -50,12 +50,24 @@ export default function Partners() {
         {/* Community Partners */}
         <div id="community" className="partner-tier reveal">
           <div className="partner-tier-title">— Community Partners —</div>
-          <div className="partner-grid cols-5">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="partner-cell">
-                <div className="partner-name" style={{ color: "var(--ink-dim)", fontSize: 13, fontWeight: 500 }}>
-                  Logo coming soon
-                </div>
+          <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
+            {[
+              { name: "Miami Fintech Club",           logo: "/images/community/miami_fintech_club.png",        url: "https://www.miamifintechclub.com/" },
+              { name: "Miami-Dubai Chamber",           logo: "/images/community/miami_dubai_chamber.png" },
+              { name: "Miami Dade College",            logo: "/images/community/miami_dade_college.png",        url: "https://www.mdc.edu/" },
+              { name: "SheFi",                        logo: "/images/community/shefi.png",                     url: "https://www.shefi.org/" },
+              { name: "Miami-Dade Beacon Council",    logo: "/images/community/miami_dade_beacon_council.png", url: "https://www.beaconcouncil.com/" },
+            ].map((p) => (
+              <div key={p.name} className="partner-cell">
+                {p.url ? (
+                  <a href={p.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
+                    <Image src={p.logo} alt={p.name} width={200} height={60}
+                      style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                  </a>
+                ) : (
+                  <Image src={p.logo} alt={p.name} width={200} height={60}
+                    style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                )}
               </div>
             ))}
           </div>
@@ -64,12 +76,21 @@ export default function Partners() {
         {/* Media Partners */}
         <div id="media" className="partner-tier reveal">
           <div className="partner-tier-title">— Media Partners —</div>
-          <div className="partner-grid">
-            {[1, 2].map((i) => (
-              <div key={i} className="partner-cell">
-                <div className="partner-name" style={{ color: "var(--ink-dim)", fontSize: 13, fontWeight: 500 }}>
-                  Logo coming soon
-                </div>
+          <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
+            {[
+              { name: "Luna PR",  logo: "/images/media/luna_pr.png",  url: "https://www.lunapr.io/" },
+              { name: "Mindo AI", logo: "/images/media/mindo_ai.png" },
+            ].map((p) => (
+              <div key={p.name} className="partner-cell">
+                {p.url ? (
+                  <a href={p.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
+                    <Image src={p.logo} alt={p.name} width={200} height={60}
+                      style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                  </a>
+                ) : (
+                  <Image src={p.logo} alt={p.name} width={200} height={60}
+                    style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                )}
               </div>
             ))}
           </div>
