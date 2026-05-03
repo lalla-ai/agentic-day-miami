@@ -31,9 +31,10 @@ const IMG: React.CSSProperties = {
   display: "block",
 };
 
-function LogoCell({ logo, name, url }: { logo: string; name: string; url?: string }) {
+function LogoCell({ logo, name, url, square }: { logo: string; name: string; url?: string; square?: boolean }) {
+  const slot = square ? { ...SLOT, width: 80, height: 80 } : SLOT;
   const img = (
-    <div style={SLOT}>
+    <div style={slot}>
       <Image src={logo} alt={name} width={300} height={200} style={IMG} />
     </div>
   );
@@ -75,7 +76,7 @@ export default function Partners() {
           <div className="partner-tier-title">— Sponsors —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
             {SPONSORS.map((s) => (
-              <LogoCell key={s.name} logo={s.logo} name={s.name} url={s.url} />
+              <LogoCell key={s.name} logo={s.logo} name={s.name} url={s.url} square={s.name === "AMAI"} />
             ))}
           </div>
         </div>
