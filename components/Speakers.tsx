@@ -10,17 +10,17 @@ type Speaker = {
 };
 
 const SPEAKERS: Speaker[] = [
-  // KEYNOTE
-  { name: "Don Tapscott", title: "Technology Thought Leader & Blockchain Expert", company: "Opening Keynote", photo: "/images/speakers/Don_Tapscott.jpg", linkedin: "https://www.linkedin.com/in/dontapscott/", role: "Keynote" },
-  // MCs
+  // FIRST ROW — featured
+  { name: "Don Tapscott", title: "Technology Thought Leader & Blockchain Expert", company: "Opening Keynote", photo: "/images/speakers/Don_Tapscott_real.jpg", linkedin: "https://www.linkedin.com/in/dontapscott/", role: "Keynote" },
+  { name: "Yat Siu", title: "Co-Founder & Executive Chairman", company: "Animoca Brands", photo: "/images/speakers/Yat_Siu.jpg", role: "Fireside" },
   { name: "Maggie Love", title: "Founder", company: "SheFi", photo: "/images/speakers/Maggie_Love.jpg", role: "MC" },
+  { name: "Megan Nilsson", title: "Crypto Megan", company: "Draper TV", photo: "/images/speakers/Megan_Nilsson.jpg", linkedin: "https://www.linkedin.com/in/cryptomegan/", role: "Fireside" },
+  // MCs
   { name: "Alejandra Slatapolsky", title: "Co-Founder", company: "Miami Fintech Club / Scalto", photo: "/images/speakers/Alejandra_Slatapolsky.png", linkedin: "https://www.linkedin.com/in/alejandraslatapolsky/", role: "MC" },
   // PANEL 1
   { name: "Katie Hilborn", title: "Founder & MD", company: "Regenerative Infrastructure Holdings", photo: "/images/speakers/Katie_Hilborn.png", linkedin: "https://www.linkedin.com/in/katiehilborn/" },
   { name: "Vishal Ganeriwala", title: "Senior Director", company: "NVIDIA DGX Cloud", photo: "/images/speakers/Vishal_Ganeriwala.png", linkedin: "https://www.linkedin.com/in/vishalganeriwala/" },
   { name: "Ariel Deschapell", title: "Co-Founder & CPTO", company: "Hydra Host", photo: "/images/speakers/Ariel_Deschapell.jpg", linkedin: "https://www.linkedin.com/in/ariel-deschapell-37a88318a/" },
-  // SPOTLIGHT
-  { name: "Alejandro Bugnone, MD", title: "Founder & CEO", company: "Total Medical Imaging / RADIN", photo: "/images/speakers/Alejandro_Bugnone.jpg", linkedin: "https://www.linkedin.com/in/alejandro-bugnone-189755295/", role: "Spotlight" },
   // PANEL 3
   { name: "Danielle Pienaar", title: "Web3 & Blockchain Director", company: "Verdant Management", photo: "/images/speakers/Danielle_Pienaar.png", linkedin: "https://www.linkedin.com/in/danielle-pienaar/" },
   { name: "Haymond Rankin", title: "Associate Director Banking", company: "Cayman Finance", photo: "/images/speakers/Haymond_Rankin.png", linkedin: "https://www.linkedin.com/in/haymond-r-7a5b1234/" },
@@ -45,9 +45,7 @@ const SPEAKERS: Speaker[] = [
   { name: "Kelly H. Zou", title: "CEO", company: "AI4Purpose", photo: "/images/speakers/Kelly_H_Zou.jpg", linkedin: "https://www.linkedin.com/in/kelly-h-zou-phd-pstat-fasa-97307b16/" },
   { name: "Alex Styhar", title: "CEO", company: "Mindo AI", photo: "/images/speakers/Alex_Styhar.png" },
   { name: "Wayne Liu", title: "CGO", company: "Perfect Corp.", photo: "/images/speakers/Wayne_Liu.png", linkedin: "https://www.linkedin.com/in/wayneliu88/" },
-  // CLOSING FIRESIDE
-  { name: "Yat Siu", title: "Co-Founder & Executive Chairman", company: "Animoca Brands", photo: "/images/speakers/Yat_Siu.jpg", role: "Fireside" },
-  { name: "Megan Nilsson", title: "Crypto Megan", company: "Draper TV", photo: "/images/speakers/Megan_Nilsson.jpg", linkedin: "https://www.linkedin.com/in/cryptomegan/", role: "Fireside" },
+  // CLOSING FIRESIDE (already shown in first row)
   // HOST
   { name: "Lalla Asmaa Alaoui", title: "Founder", company: "allmyai.ai & Agentic Day Summit", photo: "/images/speakers/Lalla_Asmaa_Alaoui.jpg", role: "Host" },
 ];
