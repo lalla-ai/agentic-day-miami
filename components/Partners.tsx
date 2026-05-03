@@ -1,5 +1,15 @@
 import Image from "next/image";
 
+const SPONSORS = [
+  { name: "WEEX Labs",          logo: "/images/sponsors/weex_labs_logo.svg", url: "https://www.weex.com/" },
+  { name: "Cayman Finance",     logo: "/images/sponsors/cayman_finance.png", url: "https://www.caymanfinance.gov.ky/" },
+  { name: "Verdant Management", logo: "/images/sponsors/verdant_management.png" },
+  { name: "Shore Labs",         logo: "/images/sponsors/shore_labs.png" },
+  { name: "Aon",                logo: "/images/sponsors/aon.png",      url: "https://www.aon.com/" },
+  { name: "NXT Law",            logo: "/images/sponsors/nxt_law.png" },
+  { name: "AMAI",               logo: "/images/sponsors/amai.png",     url: "https://allmyai.ai/" },
+];
+
 export default function Partners() {
   return (
     <section id="partners" className="section">
@@ -17,46 +27,23 @@ export default function Partners() {
           <a href="#media">Media Partners</a>
         </div>
 
-        {/* Sponsors */}
+        {/* Sponsors — flat grid, no tiers */}
         <div id="sponsors" className="partner-tier reveal">
           <div className="partner-tier-title">— Sponsors —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
-            <div className="partner-cell">
-              <Image
-                src="/images/sponsors/weex_labs_logo.svg"
-                alt="WEEX Labs"
-                width={200}
-                height={60}
-                style={{ maxWidth: "75%", maxHeight: "65%", objectFit: "contain", width: "auto", height: "auto" }}
-              />
-            </div>
-            <div className="partner-cell">
-              <Image
-                src="/images/sponsors/cayman_finance.png"
-                alt="Cayman Finance"
-                width={170}
-                height={50}
-                style={{ maxWidth: "75%", maxHeight: "65%", objectFit: "contain", width: "auto", height: "auto" }}
-              />
-            </div>
-            <div className="partner-cell">
-              <Image
-                src="/images/sponsors/verdant_management.png"
-                alt="Verdant Management"
-                width={290}
-                height={109}
-                style={{ maxWidth: "80%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }}
-              />
-            </div>
-            <div className="partner-cell">
-              <Image
-                src="/images/sponsors/shore_labs.png"
-                alt="Shore Labs"
-                width={770}
-                height={1000}
-                style={{ maxWidth: "35%", maxHeight: "75%", objectFit: "contain", width: "auto", height: "auto" }}
-              />
-            </div>
+            {SPONSORS.map((s) => (
+              <div key={s.name} className="partner-cell">
+                {s.url ? (
+                  <a href={s.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
+                    <Image src={s.logo} alt={s.name} width={200} height={60}
+                      style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                  </a>
+                ) : (
+                  <Image src={s.logo} alt={s.name} width={200} height={60}
+                    style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                )}
+              </div>
+            ))}
           </div>
         </div>
 
