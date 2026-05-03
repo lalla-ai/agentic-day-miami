@@ -408,8 +408,10 @@ h1.headline .row { display: block; }
   display: flex; align-items: center; justify-content: center;
   padding: 20px;
   transition: opacity 0.2s;
+  mix-blend-mode: multiply;
 }
 .partner-cell:hover { opacity: 0.75; }
+.partner-cell img { mix-blend-mode: multiply; }
 .partner-name { font-size: 17px; font-weight: 700; text-align: center; letter-spacing: -0.01em; line-height: 1.2; }
 
 /* GET INVOLVED */
