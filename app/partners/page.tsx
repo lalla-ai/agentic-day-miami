@@ -1,11 +1,4 @@
-import type { Metadata } from "next";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
-import RevealOnScroll from "@/components/RevealOnScroll";
-import PartnersHero from "@/components/PartnersHero";
-import PartnersOpportunities from "@/components/PartnersOpportunities";
-import PartnersExhibit from "@/components/PartnersExhibit";
-import PartnersDirectory from "@/components/PartnersDirectory";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Partners | Sponsorship & Media Accreditation",
@@ -46,15 +39,5 @@ export const metadata: Metadata = {
 };
 
 export default function PartnersPage() {
-  return (
-    <>
-      <Nav />
-      <PartnersHero />
-      <PartnersOpportunities />
-      <PartnersExhibit />
-      <PartnersDirectory />
-      <Footer />
-      <RevealOnScroll />
-    </>
-  );
+  redirect("/");
 }
