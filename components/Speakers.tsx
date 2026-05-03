@@ -10,43 +10,37 @@ type Speaker = {
 };
 
 const SPEAKERS: Speaker[] = [
-  // FIRST ROW — featured
+  // ROW 1
   { name: "Don Tapscott", title: "Technology Thought Leader & Blockchain Expert", company: "Opening Keynote", photo: "/images/speakers/Don_Tapscott_real.jpg", linkedin: "https://www.linkedin.com/in/dontapscott/", role: "Keynote" },
   { name: "Yat Siu", title: "Co-Founder & Executive Chairman", company: "Animoca Brands", photo: "/images/speakers/Yat_Siu.jpg", role: "Fireside" },
   { name: "Maggie Love", title: "Founder", company: "SheFi", photo: "/images/speakers/Maggie_Love.jpg", role: "MC" },
   { name: "Megan Nilsson", title: "Crypto Megan", company: "Draper TV", photo: "/images/speakers/Megan_Nilsson.jpg", linkedin: "https://www.linkedin.com/in/cryptomegan/", role: "Fireside" },
-  // MCs
-  { name: "Alejandra Slatapolsky", title: "Co-Founder", company: "Miami Fintech Club / Scalto", photo: "/images/speakers/Alejandra_Slatapolsky.png", linkedin: "https://www.linkedin.com/in/alejandraslatapolsky/", role: "MC" },
-  // PANEL 1
-  { name: "Katie Hilborn", title: "Founder & MD", company: "Regenerative Infrastructure Holdings", photo: "/images/speakers/Katie_Hilborn.png", linkedin: "https://www.linkedin.com/in/katiehilborn/" },
+  // ROW 2
+  { name: "Laura Leparulo", title: "Founder", company: "ETH Women", photo: "/images/speakers/Laura_Leparulo.png", linkedin: "https://www.linkedin.com/in/laura-leparulo/" },
+  { name: "Zakaria Fahim", title: "President", company: "BDO Digital Morocco / Hub Africa", photo: "/images/speakers/Zakaria_Fahim.png", linkedin: "https://www.linkedin.com/in/zakaria-fahim-97286928/" },
+  { name: "Jairo Riveros", title: "President", company: "Paysend", photo: "/images/speakers/Jairo_Riveros.png", linkedin: "https://www.linkedin.com/in/jairoriveros/" },
   { name: "Vishal Ganeriwala", title: "Senior Director", company: "NVIDIA DGX Cloud", photo: "/images/speakers/Vishal_Ganeriwala.png", linkedin: "https://www.linkedin.com/in/vishalganeriwala/" },
-  { name: "Ariel Deschapell", title: "Co-Founder & CPTO", company: "Hydra Host", photo: "/images/speakers/Ariel_Deschapell.jpg", linkedin: "https://www.linkedin.com/in/ariel-deschapell-37a88318a/" },
-  // PANEL 3
-  { name: "Danielle Pienaar", title: "Web3 & Blockchain Director", company: "Verdant Management", photo: "/images/speakers/Danielle_Pienaar.png", linkedin: "https://www.linkedin.com/in/danielle-pienaar/" },
+  // ROW 3
+  { name: "Andrew Weiner", title: "COO", company: "WEEX Labs", photo: "/images/speakers/Andrew_Weiner.png" },
   { name: "Haymond Rankin", title: "Associate Director Banking", company: "Cayman Finance", photo: "/images/speakers/Haymond_Rankin.png", linkedin: "https://www.linkedin.com/in/haymond-r-7a5b1234/" },
+  { name: "Danielle Pienaar", title: "Web3 & Blockchain Director", company: "Verdant Management", photo: "/images/speakers/Danielle_Pienaar.png", linkedin: "https://www.linkedin.com/in/danielle-pienaar/" },
   { name: "Michael Bacina", title: "Co-Founder & Attorney", company: "NXT Law", photo: "/images/speakers/Michael_Bacina.png", linkedin: "https://www.linkedin.com/in/mikebacina/" },
+  // REST
+  { name: "Alejandra Slatapolsky", title: "Co-Founder", company: "Miami Fintech Club / Scalto", photo: "/images/speakers/Alejandra_Slatapolsky.png", linkedin: "https://www.linkedin.com/in/alejandraslatapolsky/", role: "MC" },
+  { name: "Katie Hilborn", title: "Founder & MD", company: "Regenerative Infrastructure Holdings", photo: "/images/speakers/Katie_Hilborn.png", linkedin: "https://www.linkedin.com/in/katiehilborn/" },
+  { name: "Ariel Deschapell", title: "Co-Founder & CPTO", company: "Hydra Host", photo: "/images/speakers/Ariel_Deschapell.jpg", linkedin: "https://www.linkedin.com/in/ariel-deschapell-37a88318a/" },
   { name: "Anna Muheim", title: "CEO", company: "ShoreLabs", photo: "/images/speakers/Anna_Muheim.png", linkedin: "https://www.linkedin.com/in/anna-muheim/" },
   { name: "James Knox", title: "Managing Director", company: "Aon", photo: "/images/speakers/James_Knox.jpg", linkedin: "https://www.linkedin.com/in/james-c-knox-esq-67840226/" },
-  // PANEL 4
-  { name: "Andrew Weiner", title: "COO", company: "WEEX Labs", photo: "/images/speakers/Andrew_Weiner.png" },
   { name: "Cooper Emmons", title: "Head of Institutional Strategy", company: "Injective Labs", photo: "/images/speakers/Cooper_Emmons.jpg", linkedin: "https://www.linkedin.com/in/cooper-emmons-3a75a7b6/" },
   { name: "Anas Roque", title: "AI Engineering", company: "Meta", photo: "/images/speakers/Anas_Roque.jpg", linkedin: "https://www.linkedin.com/in/anas-hoque/" },
   { name: "George Varghese", title: "Head of Strategic Partnerships", company: "0G", photo: "/images/speakers/George_V.png", linkedin: "https://www.linkedin.com/in/georgemvarghese/" },
   { name: "Francesco Andreoli", title: "Director of Developer Relations", company: "MetaMask", photo: "/images/speakers/Francesco_Andreoli.jpg", linkedin: "https://www.linkedin.com/in/francescoandreoli/" },
-  // FOUNDERS TALK
-  { name: "Laura Leparulo", title: "Founder", company: "ETH Women", photo: "/images/speakers/Laura_Leparulo.png", linkedin: "https://www.linkedin.com/in/laura-leparulo/" },
-  // PANEL 6
   { name: "Hector Clark", title: "Director / VP Business Development", company: "Mastercard", photo: "/images/speakers/Hector_Clark.jpg", linkedin: "https://www.linkedin.com/in/hectorclark-payments/" },
   { name: "Vladislav Shevelev", title: "CFO", company: "Kea World", photo: "/images/speakers/Vladislav_Shevelev.png", linkedin: "https://www.linkedin.com/in/vladislavshevelev/" },
-  { name: "Zakaria Fahim", title: "President", company: "BDO Digital Morocco / Hub Africa", photo: "/images/speakers/Zakaria_Fahim.png", linkedin: "https://www.linkedin.com/in/zakaria-fahim-97286928/" },
-  { name: "Jairo Riveros", title: "President", company: "Paysend", photo: "/images/speakers/Jairo_Riveros.png", linkedin: "https://www.linkedin.com/in/jairoriveros/" },
-  // PANEL 7
   { name: "Nikita Sachdev", title: "CEO", company: "Luna PR", photo: "/images/speakers/Nikita_Sachdev.png", linkedin: "https://www.linkedin.com/in/nikitasachdev/" },
   { name: "Kelly H. Zou", title: "CEO", company: "AI4Purpose", photo: "/images/speakers/Kelly_H_Zou.jpg", linkedin: "https://www.linkedin.com/in/kelly-h-zou-phd-pstat-fasa-97307b16/" },
   { name: "Alex Styhar", title: "CEO", company: "Mindo AI", photo: "/images/speakers/Alex_Styhar.png" },
   { name: "Wayne Liu", title: "CGO", company: "Perfect Corp.", photo: "/images/speakers/Wayne_Liu.png", linkedin: "https://www.linkedin.com/in/wayneliu88/" },
-  // CLOSING FIRESIDE (already shown in first row)
-  // HOST
   { name: "Lalla Asmaa Alaoui", title: "Founder", company: "allmyai.ai & Agentic Day Summit", photo: "/images/speakers/Lalla_Asmaa_Alaoui.jpg", role: "Host" },
 ];
 
