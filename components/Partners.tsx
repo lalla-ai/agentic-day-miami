@@ -32,7 +32,7 @@ const IMG: React.CSSProperties = {
 };
 
 function LogoCell({ logo, name, url, square }: { logo: string; name: string; url?: string; square?: boolean }) {
-  const slot = square ? { ...SLOT, width: 120, height: 120 } : SLOT;
+  const slot = square ? { ...SLOT, width: 160, height: 160 } : SLOT;
   const img = (
     <div style={slot}>
       <Image src={logo} alt={name} width={300} height={200} style={IMG} />
