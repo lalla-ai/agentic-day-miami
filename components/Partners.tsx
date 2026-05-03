@@ -96,8 +96,7 @@ export default function Partners() {
         <div id="media" className="partner-tier reveal">
           <div className="partner-tier-title">— Media Partners —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
-            <LogoCell logo="/images/media/luna_pr.png"  name="Luna PR"  url="https://www.lunapr.io/" />
-            <LogoCell logo="/images/media/mindo_ai.png" name="Mindo AI" />
+            <LogoCell logo="/images/media/luna_pr.png" name="Luna PR" url="https://www.lunapr.io/" />
           </div>
         </div>
 
