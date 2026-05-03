@@ -11,45 +11,44 @@ const SPONSORS = [
   { name: "AMAI",               logo: "/images/sponsors/amai.png",     url: "https://allmyai.ai/" },
 ];
 
-// All logos: same height as Cayman Finance reference
-const LOGO_STYLE = {
-  height: "48px",
-  width: "auto",
-  maxWidth: "200px",
-  objectFit: "contain" as const,
-};
-
-// Shore Labs portrait (770×1000) needs width-based sizing
-const SHORE_STYLE = {
-  width: "62px",
-  height: "auto",
-  objectFit: "contain" as const,
-};
-
-// Applied to every logo cell — removes white backgrounds via multiply blend
-const BLEND_WRAP: React.CSSProperties = {
-  mixBlendMode: "multiply",
+// Fixed display area — every logo gets the same 200×60 slot
+const SLOT: React.CSSProperties = {
+  width: 200,
+  height: 60,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  width: "100%",
-  height: "100%",
 };
 
-// Reusable logo cell renderer
-function LogoCell({ logo, name, url, portrait = false }: { logo: string; name: string; url?: string; portrait?: boolean }) {
-  const style = portrait ? SHORE_STYLE : LOGO_STYLE;
-  const img = <Image src={logo} alt={name} width={300} height={200} style={style} />;
+// Image fills its slot, blend mode applied directly on <img>
+const IMG: React.CSSProperties = {
+  maxWidth: "100%",
+  maxHeight: "100%",
+  width: "auto",
+  height: "auto",
+  objectFit: "contain" as const,
+  mixBlendMode: "multiply" as const,
+  display: "block",
+};
+
+function LogoCell({ logo, name, url }: { logo: string; name: string; url?: string }) {
+  const img = (
+    <div style={SLOT}>
+      <Image src={logo} alt={name} width={300} height={200} style={IMG} />
+    </div>
+  );
   return (
     <div className="partner-cell">
-      <div style={BLEND_WRAP}>
-        {url ? (
-          <a href={url} target="_blank" rel="noopener noreferrer"
-             style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-            {img}
-          </a>
-        ) : img}
-      </div>
+      {url ? (
+        <a href={url} target="_blank" rel="noopener noreferrer"
+           style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
+          {img}
+        </a>
+      ) : (
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
+          {img}
+        </div>
+      )}
     </div>
   );
 }
@@ -76,7 +75,7 @@ export default function Partners() {
           <div className="partner-tier-title">— Sponsors —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
             {SPONSORS.map((s) => (
-              <LogoCell key={s.name} logo={s.logo} name={s.name} url={s.url} portrait={s.name === "Shore Labs"} />
+              <LogoCell key={s.name} logo={s.logo} name={s.name} url={s.url} />
             ))}
           </div>
         </div>
