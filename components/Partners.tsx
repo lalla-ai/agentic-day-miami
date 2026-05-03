@@ -85,7 +85,7 @@ export default function Partners() {
         <div id="community" className="partner-tier reveal">
           <div className="partner-tier-title">— Community Partners —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
-            <LogoCell logo="/images/community/miami_dubai_chamber.png"          name="Miami Fintech Club"        url="https://www.miamifintechclub.com/" />
+            <LogoCell logo="/images/community/miami_dubai_chamber.png"          name="Miami Fintech Club"        url="https://www.miamifintechclub.com/" square />
             <LogoCell logo="/images/community/miami_fintech_club.png"           name="Miami Dade College"         url="https://www.mdc.edu/" />
             <LogoCell logo="/images/community/miami_dade_beacon_council_real.png" name="Miami-Dade Beacon Council" url="https://www.beaconcouncil.com/" />
             <LogoCell logo="/images/community/shefi_real.png"                    name="SheFi"                      url="https://www.shefi.org/" />
