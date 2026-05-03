@@ -405,14 +405,11 @@ h1.headline .row { display: block; }
 @media (max-width: 600px) { .partner-grid.cols-5 { grid-template-columns: repeat(2, 1fr); } }
 .partner-cell {
   aspect-ratio: 16/10;
-  background: var(--bg-pure);
-  border: 1px solid var(--line);
-  border-radius: 16px;
   display: flex; align-items: center; justify-content: center;
   padding: 20px;
-  transition: all 0.2s;
+  transition: opacity 0.2s;
 }
-.partner-cell:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14, 17, 23, 0.06); }
+.partner-cell:hover { opacity: 0.75; }
 .partner-name { font-size: 17px; font-weight: 700; text-align: center; letter-spacing: -0.01em; line-height: 1.2; }
 
 /* GET INVOLVED */
