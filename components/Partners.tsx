@@ -10,6 +10,14 @@ const SPONSORS = [
   { name: "AMAI",               logo: "/images/sponsors/amai.png",     url: "https://allmyai.ai/" },
 ];
 
+const LOGO_STYLE = {
+  height: "48px",
+  width: "auto",
+  maxWidth: "100%",
+  objectFit: "contain" as const,
+  mixBlendMode: "multiply" as const,
+};
+
 export default function Partners() {
   return (
     <section id="partners" className="section">
@@ -35,12 +43,10 @@ export default function Partners() {
               <div key={s.name} className="partner-cell">
                 {s.url ? (
                   <a href={s.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
-                    <Image src={s.logo} alt={s.name} width={200} height={60}
-                      style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                    <Image src={s.logo} alt={s.name} width={200} height={60} style={LOGO_STYLE} />
                   </a>
                 ) : (
-                  <Image src={s.logo} alt={s.name} width={200} height={60}
-                    style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                  <Image src={s.logo} alt={s.name} width={200} height={60} style={LOGO_STYLE} />
                 )}
               </div>
             ))}
@@ -52,21 +58,19 @@ export default function Partners() {
           <div className="partner-tier-title">— Community Partners —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
             {[
-              { name: "Miami Fintech Club",           logo: "/images/community/miami_fintech_club.png",        url: "https://www.miamifintechclub.com/" },
-              { name: "Miami-Dubai Chamber",           logo: "/images/community/miami_dubai_chamber.png" },
-              { name: "Miami Dade College",            logo: "/images/community/miami_dade_college.png",        url: "https://www.mdc.edu/" },
-              { name: "SheFi",                        logo: "/images/community/shefi.png",                     url: "https://www.shefi.org/" },
-              { name: "Miami-Dade Beacon Council",    logo: "/images/community/miami_dade_beacon_council.png", url: "https://www.beaconcouncil.com/" },
+              { name: "Miami Fintech Club",        logo: "/images/community/miami_fintech_club.png",        url: "https://www.miamifintechclub.com/" },
+              { name: "Miami Dade College",         logo: "/images/community/miami_dade_college.png",        url: "https://www.mdc.edu/" },
+              { name: "Miami-Dade Beacon Council", logo: "/images/community/miami_dade_beacon_council.png", url: "https://www.beaconcouncil.com/" },
+              { name: "Miami-Dubai Chamber",        logo: "/images/community/miami_dubai_chamber.png" },
+              { name: "SheFi",                     logo: "/images/community/shefi.png",                     url: "https://www.shefi.org/" },
             ].map((p) => (
               <div key={p.name} className="partner-cell">
                 {p.url ? (
                   <a href={p.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
-                    <Image src={p.logo} alt={p.name} width={200} height={60}
-                      style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                    <Image src={p.logo} alt={p.name} width={200} height={60} style={LOGO_STYLE} />
                   </a>
                 ) : (
-                  <Image src={p.logo} alt={p.name} width={200} height={60}
-                    style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                  <Image src={p.logo} alt={p.name} width={200} height={60} style={LOGO_STYLE} />
                 )}
               </div>
             ))}
@@ -84,12 +88,10 @@ export default function Partners() {
               <div key={p.name} className="partner-cell">
                 {p.url ? (
                   <a href={p.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
-                    <Image src={p.logo} alt={p.name} width={200} height={60}
-                      style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                    <Image src={p.logo} alt={p.name} width={200} height={60} style={LOGO_STYLE} />
                   </a>
                 ) : (
-                  <Image src={p.logo} alt={p.name} width={200} height={60}
-                    style={{ maxWidth: "75%", maxHeight: "60%", objectFit: "contain", width: "auto", height: "auto" }} />
+                  <Image src={p.logo} alt={p.name} width={200} height={60} style={LOGO_STYLE} />
                 )}
               </div>
             ))}
