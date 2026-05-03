@@ -8,7 +8,7 @@ export default function Stats() {
             <div className="stat-lbl">Curated Seats</div>
           </div>
           <div className="reveal">
-            <div className="stat-num">450+</div>
+            <div className="stat-num">900+</div>
             <div className="stat-lbl">Founders, Investors & Operators</div>
           </div>
           <div className="reveal">
