@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 
 const SPONSORS = [
@@ -10,12 +11,30 @@ const SPONSORS = [
   { name: "AMAI",               logo: "/images/sponsors/amai.png",     url: "https://allmyai.ai/" },
 ];
 
+// Standard style for landscape/square logos
 const LOGO_STYLE = {
   height: "48px",
   width: "auto",
-  maxWidth: "100%",
+  maxWidth: "180px",
   objectFit: "contain" as const,
-  mixBlendMode: "multiply" as const,
+};
+
+// Shore Labs is portrait (770×1000) — constrain by width instead
+const SHORE_STYLE = {
+  width: "48px",
+  height: "auto",
+  maxHeight: "64px",
+  objectFit: "contain" as const,
+};
+
+// Wrapper to remove white backgrounds via multiply blend mode
+const BLEND_WRAP: React.CSSProperties = {
+  mixBlendMode: "multiply",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+  height: "100%",
 };
 
 export default function Partners() {
@@ -39,17 +58,21 @@ export default function Partners() {
         <div id="sponsors" className="partner-tier reveal">
           <div className="partner-tier-title">— Sponsors —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
-            {SPONSORS.map((s) => (
-              <div key={s.name} className="partner-cell">
-                {s.url ? (
-                  <a href={s.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
-                    <Image src={s.logo} alt={s.name} width={200} height={60} style={LOGO_STYLE} />
-                  </a>
-                ) : (
-                  <Image src={s.logo} alt={s.name} width={200} height={60} style={LOGO_STYLE} />
-                )}
-              </div>
-            ))}
+            {SPONSORS.map((s) => {
+              const imgStyle = s.name === "Shore Labs" ? SHORE_STYLE : LOGO_STYLE;
+              const img = <Image src={s.logo} alt={s.name} width={200} height={200} style={imgStyle} />;
+              return (
+                <div key={s.name} className="partner-cell">
+                  <div style={BLEND_WRAP}>
+                    {s.url ? (
+                      <a href={s.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        {img}
+                      </a>
+                    ) : img}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
