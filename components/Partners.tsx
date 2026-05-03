@@ -21,9 +21,9 @@ const LOGO_STYLE = {
 
 // Shore Labs is portrait (770×1000) — constrain by width instead
 const SHORE_STYLE = {
-  width: "48px",
+  width: "64px",
   height: "auto",
-  maxHeight: "64px",
+  maxHeight: "84px",
   objectFit: "contain" as const,
 };
 
