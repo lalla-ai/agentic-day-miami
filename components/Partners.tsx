@@ -11,23 +11,22 @@ const SPONSORS = [
   { name: "AMAI",               logo: "/images/sponsors/amai.png",     url: "https://allmyai.ai/" },
 ];
 
-// Standard style for landscape/square logos
+// All logos: same height as Cayman Finance reference
 const LOGO_STYLE = {
   height: "48px",
   width: "auto",
-  maxWidth: "180px",
+  maxWidth: "200px",
   objectFit: "contain" as const,
 };
 
-// Shore Labs is portrait (770×1000) — constrain by width instead
+// Shore Labs portrait (770×1000) needs width-based sizing
 const SHORE_STYLE = {
-  width: "64px",
+  width: "62px",
   height: "auto",
-  maxHeight: "84px",
   objectFit: "contain" as const,
 };
 
-// Wrapper to remove white backgrounds via multiply blend mode
+// Applied to every logo cell — removes white backgrounds via multiply blend
 const BLEND_WRAP: React.CSSProperties = {
   mixBlendMode: "multiply",
   display: "flex",
@@ -36,6 +35,24 @@ const BLEND_WRAP: React.CSSProperties = {
   width: "100%",
   height: "100%",
 };
+
+// Reusable logo cell renderer
+function LogoCell({ logo, name, url, portrait = false }: { logo: string; name: string; url?: string; portrait?: boolean }) {
+  const style = portrait ? SHORE_STYLE : LOGO_STYLE;
+  const img = <Image src={logo} alt={name} width={300} height={200} style={style} />;
+  return (
+    <div className="partner-cell">
+      <div style={BLEND_WRAP}>
+        {url ? (
+          <a href={url} target="_blank" rel="noopener noreferrer"
+             style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+            {img}
+          </a>
+        ) : img}
+      </div>
+    </div>
+  );
+}
 
 export default function Partners() {
   return (
@@ -58,21 +75,9 @@ export default function Partners() {
         <div id="sponsors" className="partner-tier reveal">
           <div className="partner-tier-title">— Sponsors —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
-            {SPONSORS.map((s) => {
-              const imgStyle = s.name === "Shore Labs" ? SHORE_STYLE : LOGO_STYLE;
-              const img = <Image src={s.logo} alt={s.name} width={200} height={200} style={imgStyle} />;
-              return (
-                <div key={s.name} className="partner-cell">
-                  <div style={BLEND_WRAP}>
-                    {s.url ? (
-                      <a href={s.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        {img}
-                      </a>
-                    ) : img}
-                  </div>
-                </div>
-              );
-            })}
+            {SPONSORS.map((s) => (
+              <LogoCell key={s.name} logo={s.logo} name={s.name} url={s.url} portrait={s.name === "Shore Labs"} />
+            ))}
           </div>
         </div>
 
@@ -80,23 +85,11 @@ export default function Partners() {
         <div id="community" className="partner-tier reveal">
           <div className="partner-tier-title">— Community Partners —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
-            {[
-              { name: "Miami Fintech Club",        logo: "/images/community/miami_fintech_club.png",        url: "https://www.miamifintechclub.com/" },
-              { name: "Miami Dade College",         logo: "/images/community/miami_dade_college.png",        url: "https://www.mdc.edu/" },
-              { name: "Miami-Dade Beacon Council", logo: "/images/community/miami_dade_beacon_council.png", url: "https://www.beaconcouncil.com/" },
-              { name: "Miami-Dubai Chamber",        logo: "/images/community/miami_dubai_chamber.png" },
-              { name: "SheFi",                     logo: "/images/community/shefi.png",                     url: "https://www.shefi.org/" },
-            ].map((p) => (
-              <div key={p.name} className="partner-cell">
-                {p.url ? (
-                  <a href={p.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
-                    <Image src={p.logo} alt={p.name} width={200} height={60} style={LOGO_STYLE} />
-                  </a>
-                ) : (
-                  <Image src={p.logo} alt={p.name} width={200} height={60} style={LOGO_STYLE} />
-                )}
-              </div>
-            ))}
+            <LogoCell logo="/images/community/miami_fintech_club.png"        name="Miami Fintech Club"        url="https://www.miamifintechclub.com/" />
+            <LogoCell logo="/images/community/miami_dade_college.png"         name="Miami Dade College"         url="https://www.mdc.edu/" />
+            <LogoCell logo="/images/community/miami_dade_beacon_council.png" name="Miami-Dade Beacon Council" url="https://www.beaconcouncil.com/" />
+            <LogoCell logo="/images/community/miami_dubai_chamber.png"        name="Miami-Dubai Chamber" />
+            <LogoCell logo="/images/community/shefi.png"                      name="SheFi"                      url="https://www.shefi.org/" />
           </div>
         </div>
 
@@ -104,20 +97,8 @@ export default function Partners() {
         <div id="media" className="partner-tier reveal">
           <div className="partner-tier-title">— Media Partners —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
-            {[
-              { name: "Luna PR",  logo: "/images/media/luna_pr.png",  url: "https://www.lunapr.io/" },
-              { name: "Mindo AI", logo: "/images/media/mindo_ai.png" },
-            ].map((p) => (
-              <div key={p.name} className="partner-cell">
-                {p.url ? (
-                  <a href={p.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
-                    <Image src={p.logo} alt={p.name} width={200} height={60} style={LOGO_STYLE} />
-                  </a>
-                ) : (
-                  <Image src={p.logo} alt={p.name} width={200} height={60} style={LOGO_STYLE} />
-                )}
-              </div>
-            ))}
+            <LogoCell logo="/images/media/luna_pr.png"  name="Luna PR"  url="https://www.lunapr.io/" />
+            <LogoCell logo="/images/media/mindo_ai.png" name="Mindo AI" />
           </div>
         </div>
 
