@@ -19,6 +19,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Our Events</h4>
             <a href="#events">Agentic Day Miami · May 4</a>
+            <a href="/May4thpanels">Panels May4th</a>
             <a href="#events">Agentic Hackathon · June 5–6</a>
             <a href="#events">Agentic Day Toronto · July 22</a>
           </div>
