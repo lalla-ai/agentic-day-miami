@@ -11,27 +11,27 @@ const SPONSORS = [
   { name: "AMAI",               logo: "/images/sponsors/amai.png",     url: "https://allmyai.ai/" },
 ];
 
-// Uniform display slot — every logo renders into the same 200x100 box
+// Container — flex centers the logo; every logo gets the same visual height
 const SLOT: React.CSSProperties = {
-  width: 200,
-  height: 100,
+  width: "100%",
+  height: 80,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
 };
 
-// Image fills its slot, blend mode applied directly on <img>
+// Every logo renders at the same TARGET HEIGHT regardless of source aspect ratio.
+// Width auto-scales to keep aspect; max-width caps very wide marks.
 const IMG: React.CSSProperties = {
-  maxWidth: "100%",
-  maxHeight: "100%",
+  height: 60,
   width: "auto",
-  height: "auto",
+  maxWidth: 180,
   objectFit: "contain" as const,
   mixBlendMode: "multiply" as const,
   display: "block",
 };
 
-// `square` legacy prop ignored — all logos use the uniform slot
+// `square` legacy prop ignored — all logos use the same fixed-height slot
 function LogoCell({ logo, name, url }: { logo: string; name: string; url?: string; square?: boolean }) {
   const slot = SLOT;
   const img = (
