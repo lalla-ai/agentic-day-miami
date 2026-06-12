@@ -39,6 +39,7 @@ export default function Footer() {
             >
               Agentic Day Toronto · Jul 21–22
             </a>
+            <a href="/May4thpanels">May 4th Agentic Day Panels</a>
           </div>
           <div className="footer-col">
             <h4>Connect</h4>

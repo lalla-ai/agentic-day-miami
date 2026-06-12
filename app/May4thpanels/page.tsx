@@ -23,6 +23,7 @@ const PANELS: Panel[] = [
     eyebrow: 'Opening Keynote',
     thumbnail: '/may4thpanels/thumbnails/keynote.png',
     title: 'Opening Keynote with Don Tapscott: Why the Next Stage of AI Must Be Decentralized',
+    videoUrl: 'https://www.youtube.com/watch?v=iNtv9_wmI_M',
     speakers: [
       { avatar: '/may4thpanels/avatars/don_tapscott.png', name: 'Don Tapscott', company: 'Blockchain Research Institute', role: 'Technology Thought Leader & Blockchain Expert' },
     ],
@@ -31,6 +32,7 @@ const PANELS: Panel[] = [
     eyebrow: 'Panel 1',
     thumbnail: '/may4thpanels/thumbnails/panel-1-infrastructure.png',
     title: 'AI Infrastructure & Economics',
+    videoUrl: 'https://www.youtube.com/watch?v=3VOpC0bgztA',
     speakers: [
       { avatar: '/may4thpanels/avatars/katie_hilborn.png', name: 'Katie Hilborn', company: 'Regenerative Infrastructure Holdings', role: 'Founder & CEO', isModerator: true },
       { avatar: '/may4thpanels/avatars/vishal_ganeriwala.png', name: 'Vishal Ganeriwala', company: 'NVIDIA DGX Cloud', role: 'Sr Director Product Marketing' },
@@ -42,6 +44,7 @@ const PANELS: Panel[] = [
     eyebrow: 'Spotlight Talk',
     thumbnail: '/may4thpanels/thumbnails/spotlight-radiology.png',
     title: 'Agentic AI in Radiology: Orchestrating the Future of Imaging Workflow',
+    videoUrl: 'https://www.youtube.com/watch?v=jKBhtdmnHgQ',
     speakers: [
       { avatar: '/may4thpanels/avatars/alejandro_bugnone.png', name: 'Alejandro Bugnone, MD', company: 'Total Medical Imaging · RADIN', role: 'Founder · CEO' },
     ],
@@ -62,6 +65,7 @@ const PANELS: Panel[] = [
     eyebrow: 'Panel 4',
     thumbnail: '/may4thpanels/thumbnails/panel-4-ai-crypto.png',
     title: 'Real World Deployment of AI in Crypto',
+    videoUrl: 'https://www.youtube.com/watch?v=92jAlE2yt7g',
     speakers: [
       { avatar: '/may4thpanels/avatars/andrew_weiner.png', name: 'Andrew Weiner', company: 'WEEX Labs', role: 'Chief Operating Officer', isModerator: true },
       { avatar: '/may4thpanels/avatars/maggie_love.png', name: 'Maggie Love', company: 'SheFi', role: 'Founder' },
@@ -73,6 +77,7 @@ const PANELS: Panel[] = [
     eyebrow: 'Founders Talk',
     thumbnail: '/may4thpanels/thumbnails/founders-talk.png',
     title: 'Founders Talk: Building the community of Web3 & AI',
+    videoUrl: 'https://www.youtube.com/watch?v=MvU0JOh1-qU',
     speakers: [
       { avatar: '/may4thpanels/avatars/tracy_leparulo.png', name: 'Tracy Leparulo', company: 'Untraceable', role: 'Founder' },
       { avatar: '/may4thpanels/avatars/lalla_asmaa.png', name: 'Lalla Asmaa Alaoui', company: 'Agentic Day', role: 'Founder' },
@@ -83,6 +88,7 @@ const PANELS: Panel[] = [
     eyebrow: 'Panel 6',
     thumbnail: '/may4thpanels/thumbnails/panel-6-fintech.png',
     title: 'Agentic Fintech Goes Global: Payments, Trust & Expansion in the Age of Autonomous Finance',
+    videoUrl: 'https://www.youtube.com/watch?v=9q8rn1XvHbM',
     speakers: [
       { avatar: '/may4thpanels/avatars/alejandra_slatapolsky.png', name: 'Alejandra Slatapolsky', company: 'Miami Fintech Club · Scalto', role: 'Co-Founder', isModerator: true },
       { avatar: '/may4thpanels/avatars/zakaria_fahim.png', name: 'Zakaria Fahim', company: 'BDO Digital Morocco · Hub Africa', role: 'President' },
@@ -95,6 +101,7 @@ const PANELS: Panel[] = [
     eyebrow: 'Panel 7',
     thumbnail: '/may4thpanels/thumbnails/panel-7-commerce.png',
     title: 'Agentic Commerce: The Future of AI-Powered Shopping',
+    videoUrl: 'https://www.youtube.com/watch?v=3AdaUdoNHnI',
     speakers: [
       { avatar: '/may4thpanels/avatars/nikita_sachdev.png', name: 'Nikita Sachdev', company: 'Luna Media Corp · Luna PR', role: 'Founder', isModerator: true },
       { avatar: '/may4thpanels/avatars/wayne_liu.png', name: 'Wayne Liu', company: 'Perfect Corp', role: 'Chief Growth Officer' },
@@ -106,6 +113,7 @@ const PANELS: Panel[] = [
     eyebrow: 'Closing Fireside',
     thumbnail: '/may4thpanels/thumbnails/closing-fireside.png',
     title: 'Closing Fireside: Agentic AI, The Next Frontier of Autonomous Value Creation',
+    videoUrl: 'https://www.youtube.com/watch?v=nAFx02Xq9mU',
     speakers: [
       { avatar: '/may4thpanels/avatars/yat_siu.png', name: 'Yat Siu', company: 'Animoca Brands', role: 'Co-Founder & Executive Chairman' },
       { avatar: '/may4thpanels/avatars/megan_nilsson.png', name: 'Megan Nilsson', company: 'Crypto Megan', role: 'Founder' },
