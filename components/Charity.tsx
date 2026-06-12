@@ -5,7 +5,7 @@ export default function Charity() {
         <div className="charity reveal">
           <div className="charity-eyebrow">— Giving Back</div>
           <h3>
-            The evening reception closes with a curated act of giving back to a cause that matters.
+            The evening reception closes with a curated act of giving back to an AI-for-good project.
           </h3>
         </div>
       </div>

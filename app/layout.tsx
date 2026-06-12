@@ -45,14 +45,7 @@ export const metadata: Metadata = {
     title: SITE_DEFAULT_TITLE,
     description: SITE_DEFAULT_DESCRIPTION,
     url: SITE_URL,
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Agentic Day Miami — Where AI meets capital. May 4, 2026.",
-      },
-    ],
+    // images intentionally omitted — Next.js uses app/opengraph-image.tsx automatically
   },
   twitter: {
     card: "summary_large_image",
@@ -61,7 +54,7 @@ export const metadata: Metadata = {
       "Invitation-only summit series at the intersection of agentic AI and capital. Three editions — Miami · Amsterdam (Jun 22) · Toronto (Jul 21–22).",
     site: TWITTER_HANDLE,
     creator: TWITTER_HANDLE,
-    images: ["/og-image.png"],
+    // images intentionally omitted — Next.js uses app/twitter-image.tsx automatically
   },
   formatDetection: {
     telephone: false,
@@ -220,8 +213,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {/* Structured data: Event */}
         <script
           type="application/ld+json"
