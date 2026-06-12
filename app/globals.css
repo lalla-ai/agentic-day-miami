@@ -401,6 +401,7 @@ h1.headline .row { display: block; }
   max-width: 720px;
   line-height: 1.45;
 }
+.speakers-page-hero-cta { margin-top: 32px; display: flex; }
 .speakers-page-grid-section { padding: 40px 0 100px; }
 .speakers-grid-t2049 {
   display: grid;

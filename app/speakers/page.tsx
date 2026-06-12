@@ -61,6 +61,14 @@ export default function SpeakersPage() {
             <p className="speakers-page-sub reveal">
               Founders, investors, and operators defining the next era of agentic AI, infrastructure, and capital.
             </p>
+            <div className="speakers-page-hero-cta reveal">
+              <a
+                href="mailto:pr@helloagentic.ai?subject=Speaker%20Application%20%E2%80%94%20Agentic%20Day"
+                className="btn-primary"
+              >
+                Apply to Speak <span className="btn-dot" />
+              </a>
+            </div>
           </div>
         </section>
 
