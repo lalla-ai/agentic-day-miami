@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 
-const ROW_0 = ["a16z","alchemy","anchorage-digital","animoca-brands","apple","arbitrum","arweave","avalanche","aws","binance","bitcoin-magazine","bitgo","bitmain","blockdaemon","blockstream","blockworks","chainalysis"];
-const ROW_1 = ["chainlink","cleanspark","coinbase","coindesk","coinfund","cointelegraph","compound","consensys","cosmos","decrypt","digital-currency-group","figment","filecoin","fireblocks","foundry","framework","galaxy"];
-const ROW_2 = ["google","hedera","ibm","infura","jump-trading","kraken","ledger","lightning-labs","luxor","marathon","mastercard","messari","meta","microsoft","multicoin","near","optimism"];
-const ROW_3 = ["oracle","pantera","paradigm","paypal","polygon","riot","ripple","salesforce","solana","starkware","stripe","tezos","the-block","trm","visa","zksync"];
+const ROW_0 = ["a16z","alchemy","anchorage-digital","animoca-brands","apple","arbitrum","arweave","avalanche","aws","bdo","binance","bitcoin-magazine","bitgo","bitmain","blockdaemon","blockstream","blockworks","cayman-finance","chainalysis"];
+const ROW_1 = ["chainlink","cleanspark","coinbase","coindesk","coinfund","cosmos","decrypt","digital-currency-group","figment","filecoin","fireblocks","foundry","framework","galaxy"];
+const ROW_2 = ["anthropic","deepmind","google","google-cloud","hedera","ibm","infura","jump-trading","kraken","ledger","lightning-labs","luxor","marathon","mastercard","messari","meta","microsoft","mistral","multicoin","near","nvidia","openai","optimism","perplexity"];
+const ROW_3 = ["oracle","pantera","paradigm","paypal","polygon","riot","ripple","salesforce","solana","starkware","stripe","tezos","the-block","trm","visa","xdc","zksync"];
 
 const ROWS = [
   { logos: ROW_0, duration: "70s", reverse: false },
@@ -52,9 +52,9 @@ export default function AttendedBy() {
                         width: "auto",
                         maxWidth: "220px",
                         objectFit: "contain",
-                        filter: "invert(1) brightness(0.95) saturate(0.3)",
-                        opacity: 0.85,
-                        transition: "opacity 0.2s, filter 0.2s",
+                        filter: "grayscale(1) brightness(0.95) contrast(1.8)",
+                        opacity: 1,
+                        transition: "opacity 0.2s",
                       }}
                     />
                   </div>
@@ -67,25 +67,14 @@ export default function AttendedBy() {
 
       <style jsx>{`
         .attended-section {
-          background: #07091a;
-          color: #fff;
+          background: #ffffff;
+          color: #0e1117;
           padding: 80px 0;
           position: relative;
           overflow: hidden;
         }
-        .attended-section::after {
-          content: '';
-          position: absolute;
-          top: 0; right: -10%;
-          width: 50%; height: 100%;
-          background-image: radial-gradient(circle, rgba(124,194,66,0.18) 1px, transparent 1px);
-          background-size: 18px 18px;
-          -webkit-mask-image: radial-gradient(ellipse at right, black 0%, transparent 70%);
-          mask-image: radial-gradient(ellipse at right, black 0%, transparent 70%);
-          pointer-events: none;
-        }
         .attended-eyebrow {
-          color: #a4e547;
+          color: #7c5cff;
           font-size: 14px;
           font-weight: 600;
           letter-spacing: 0.18em;
@@ -97,6 +86,7 @@ export default function AttendedBy() {
           letter-spacing: -0.04em;
           line-height: 0.95;
           margin: 40px 0;
+          color: #0e1117;
         }
         .attended-highlight { color: #7CC242; }
         .logo-wall {
@@ -108,8 +98,8 @@ export default function AttendedBy() {
           position: absolute; top: 0; bottom: 0;
           width: 200px; z-index: 3; pointer-events: none;
         }
-        .logo-wall::before { left: 0; background: linear-gradient(to right, #07091a, transparent); }
-        .logo-wall::after { right: 0; background: linear-gradient(to left, #07091a, transparent); }
+        .logo-wall::before { left: 0; background: linear-gradient(to right, #ffffff, transparent); }
+        .logo-wall::after { right: 0; background: linear-gradient(to left, #ffffff, transparent); }
         .logo-row {
           overflow: hidden;
           margin-bottom: 24px;

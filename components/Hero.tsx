@@ -13,7 +13,7 @@ export default function Hero() {
         </div>
         <div className="hero-cta-row" style={{ marginBottom: 0 }}>
           <a
-            href="https://luma.com/event/evt-CPHbpuc52PLWqp0"
+            href="https://luma.com/lo977l6h"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"

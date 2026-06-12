@@ -38,7 +38,7 @@ export default function Nav() {
             <li><a href="/#community-partner">Apply</a></li>
           </ul>
           <a
-            href="https://luma.com/event/evt-CPHbpuc52PLWqp0"
+            href="https://luma.com/lo977l6h"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
@@ -64,7 +64,7 @@ export default function Nav() {
         <a href="/partners" onClick={handleLinkClick}>Partners</a>
         <a href="/#community-partner" onClick={handleLinkClick}>Apply</a>
         <a
-          href="https://luma.com/event/evt-CPHbpuc52PLWqp0"
+          href="https://luma.com/lo977l6h"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary"
