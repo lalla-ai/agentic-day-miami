@@ -11,10 +11,10 @@ const SPONSORS = [
   { name: "AMAI",               logo: "/images/sponsors/amai.png",     url: "https://allmyai.ai/" },
 ];
 
-// Fixed display area — every logo gets the same 200×60 slot
+// Uniform display slot — every logo renders into the same 200x100 box
 const SLOT: React.CSSProperties = {
   width: 200,
-  height: 60,
+  height: 100,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -31,8 +31,9 @@ const IMG: React.CSSProperties = {
   display: "block",
 };
 
-function LogoCell({ logo, name, url, square }: { logo: string; name: string; url?: string; square?: boolean }) {
-  const slot = square ? { ...SLOT, width: 160, height: 160 } : SLOT;
+// `square` legacy prop ignored — all logos use the uniform slot
+function LogoCell({ logo, name, url }: { logo: string; name: string; url?: string; square?: boolean }) {
+  const slot = SLOT;
   const img = (
     <div style={slot}>
       <Image src={logo} alt={name} width={300} height={200} style={IMG} />
