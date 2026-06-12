@@ -98,41 +98,6 @@ export default function Partners() {
           <p style={{ textAlign: "center", color: "var(--ink-dim)", fontSize: 14, padding: "24px 0" }}>Coming soon</p>
         </div>
 
-        {/* Get involved */}
-        <div className="partner-cta reveal">
-          <a
-            href="https://luma.com/event/evt-CPHbpuc52PLWqp0"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="involved-card tickets"
-          >
-            <h3 className="involved-headline">
-              <span className="row">Request</span>
-              <span className="row">your invite</span>
-            </h3>
-            <span className="involved-cta">
-              Request Invite <span className="btn-dot" />
-            </span>
-          </a>
-          <a href="mailto:pr@helloagentic.ai" className="involved-card speaker">
-            <h3 className="involved-headline">
-              <span className="row">Become</span>
-              <span className="row">a speaker</span>
-            </h3>
-            <span className="involved-cta involved-cta-dark">
-              Apply now <span className="btn-dot" />
-            </span>
-          </a>
-          <a href="mailto:pr@helloagentic.ai" className="involved-card partner">
-            <h3 className="involved-headline">
-              <span className="row">Become</span>
-              <span className="row">a partner</span>
-            </h3>
-            <span className="involved-cta involved-cta-dark">
-              Partner with us <span className="btn-dot" />
-            </span>
-          </a>
-        </div>
       </div>
     </section>
   );

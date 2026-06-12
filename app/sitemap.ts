@@ -24,16 +24,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${SITE_URL}/#agenda`,
+      url: `${SITE_URL}/speakers`,
       lastModified,
       changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/#speakers`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${SITE_URL}/#events`,

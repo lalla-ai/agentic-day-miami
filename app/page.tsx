@@ -1,13 +1,11 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
+import ReliveVideo from "@/components/ReliveVideo";
 import About from "@/components/About";
 import Speakers from "@/components/Speakers";
 import Marquee from "@/components/Marquee";
-import Agenda from "@/components/Agenda";
 import EventsSeries from "@/components/EventsSeries";
-import Partners from "@/components/Partners";
-import CommunityPartnerForm from "@/components/CommunityPartnerForm";
+import JoinCTA from "@/components/JoinCTA";
 import Charity from "@/components/Charity";
 import FinalCTA from "@/components/FinalCTA";
 import AttendedBy from "@/components/AttendedBy";
@@ -19,14 +17,12 @@ export default function HomePage() {
     <>
       <Nav />
       <Hero />
-      <Stats />
+      <ReliveVideo />
       <About />
       <Speakers />
       <Marquee />
-      <Agenda />
       <EventsSeries />
-      <Partners />
-      <CommunityPartnerForm />
+      <JoinCTA />
       <Charity />
       <FinalCTA />
       <AttendedBy />
