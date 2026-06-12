@@ -4,16 +4,16 @@ export default function About() {
       <div className="wrap">
         <div className="section-eyebrow reveal">— About</div>
         <h2 className="reveal">
-          Building the foundations<br />of autonomous intelligence.
+          Not to talk about the future —<br />to build it.
         </h2>
         <div className="about-grid">
           <p className="about-lead reveal">
-            Agentic Day is where the builders, investors, and operators shaping the next wave of autonomous AI come together — not to talk about the future, but to build it.
+            Where the builders shipping agentic AI meet the capital deciding what scales.
           </p>
           <div className="about-body reveal">
             <p>One afternoon. One room. The right people. No open registration. No filler content. Just high-signal conversations, real deal flow, and the connections that move industries forward.</p>
-            <p>Hosted at Tesla Miami Design District — a sleek, glass-enclosed environment in the heart of Miami&apos;s prestigious Design District, surrounded by global luxury brands and cutting-edge innovation.</p>
             <p>The program features keynotes, panels, founder presentations, and fireside conversations focused on the real-world application of agentic systems.</p>
+            <p>Three editions. One mission. Europe is next — <strong>Agentic Day Amsterdam</strong>, June 22, 2026.</p>
           </div>
         </div>
       </div>

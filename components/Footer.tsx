@@ -18,10 +18,27 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h4>Our Events</h4>
-            <a href="#events">Agentic Day Miami · May 4</a>
-            <a href="/May4thpanels">Panels May4th</a>
-            <a href="#events">Agentic Hackathon · June 5–6</a>
-            <a href="#events">Agentic Day Toronto · July 22</a>
+            <a
+              href="https://luma.com/event/evt-CPHbpuc52PLWqp0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agentic Day Miami · May 4
+            </a>
+            <a
+              href="https://luma.com/lo977l6h"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agentic Day Amsterdam · Jun 22
+            </a>
+            <a
+              href="https://luma.com/Agentic_AI_Day"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agentic Day Toronto · Jul 21–22
+            </a>
           </div>
           <div className="footer-col">
             <h4>Connect</h4>

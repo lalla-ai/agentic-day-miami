@@ -37,10 +37,10 @@ export default function EventsSeries() {
     <section id="events" className="series-section">
       <div className="wrap">
         <div className="series-head reveal">
-          <div className="series-eyebrow">— THE SERIES</div>
-          <h2 className="series-title">Three cities.<br />One agentic mission.</h2>
+          <div className="series-eyebrow">— THE AGENTIC SERIES</div>
+          <h2 className="series-title">Three editions. Across markets.<br />One agentic mission.</h2>
           <p className="series-sub">
-            One room. The right people. No open registration, no filler — just high-signal conversations, real deal flow, and the connections that move industries forward.
+            The room that decides what scales — convened across markets, edition after edition.
           </p>
         </div>
 
