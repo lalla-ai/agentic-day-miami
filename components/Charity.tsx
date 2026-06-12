@@ -5,7 +5,7 @@ export default function Charity() {
         <div className="charity reveal">
           <div className="charity-eyebrow">— Giving Back</div>
           <h3>
-            The evening reception features a curated silent art auction benefiting St. Jude Children&apos;s Research Hospital.
+            The evening reception closes with a curated act of giving back to a cause that matters.
           </h3>
         </div>
       </div>

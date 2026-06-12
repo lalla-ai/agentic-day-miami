@@ -8,6 +8,7 @@ import {
   SITE_KEYWORDS,
   TWITTER_HANDLE,
   EVENT_DATA,
+  SERIES_EDITIONS,
 } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -55,9 +56,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agentic Day Miami | Where AI meets capital",
+    title: "Agentic Day | Where AI meets capital",
     description:
-      "300 curated seats. May 4, 2026. Tesla Miami Design District. By invitation only.",
+      "Invitation-only summit series at the intersection of agentic AI and capital. Three editions — Miami · Amsterdam (Jun 22) · Toronto (Jul 21–22).",
     site: TWITTER_HANDLE,
     creator: TWITTER_HANDLE,
     images: ["/og-image.png"],
@@ -135,6 +136,72 @@ const orgJsonLd = {
   ],
 };
 
+// EventSeries JSON-LD — surfaces all three editions to Google + AI search
+const eventSeriesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "EventSeries",
+  name: "Agentic Day",
+  description:
+    "Agentic Day is the invitation-only summit series at the intersection of agentic AI and capital — three editions across markets.",
+  url: SITE_URL,
+  organizer: {
+    "@type": "Organization",
+    name: "Agentic Day",
+    url: SITE_URL,
+    email: "pr@helloagentic.ai",
+  },
+  subEvent: SERIES_EDITIONS.map((edition) => ({
+    "@type": "Event",
+    name: edition.name,
+    description: edition.description,
+    startDate: edition.startDate,
+    endDate: edition.endDate,
+    eventStatus: edition.eventStatus,
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: {
+      "@type": "Place",
+      name: edition.locationName,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: edition.locationCity,
+        addressRegion: edition.locationRegion,
+        addressCountry: edition.locationCountry,
+      },
+    },
+    organizer: {
+      "@type": "Organization",
+      name: "Agentic Day",
+      url: SITE_URL,
+    },
+    offers: {
+      "@type": "Offer",
+      url: edition.offersUrl,
+      availability: "https://schema.org/InviteOnly",
+    },
+  })),
+};
+
+// VideoObject JSON-LD for the Miami recap video — Google video rich results + AI citations
+const videoJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Agentic Day Miami — Recap",
+  description:
+    "Highlight reel from Agentic Day Miami, the flagship edition of the agentic AI summit series, hosted at Tesla Miami Design District.",
+  thumbnailUrl: `${SITE_URL}/og-image.png`,
+  uploadDate: "2026-05-05",
+  contentUrl: `${SITE_URL}/videos/relive-miami.mp4`,
+  embedUrl: `${SITE_URL}/#relive`,
+  publisher: {
+    "@type": "Organization",
+    name: "Agentic Day",
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/images/agentic-day-logo.jpg`,
+    },
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -164,6 +231,16 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+        {/* Structured data: EventSeries (all three editions) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSeriesJsonLd) }}
+        />
+        {/* Structured data: VideoObject (recap reel) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
         />
       </head>
       <body>{children}</body>
