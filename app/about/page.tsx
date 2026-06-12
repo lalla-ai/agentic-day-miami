@@ -23,6 +23,7 @@ export default function AboutPage() {
     <>
       <Nav />
       <main style={{ paddingTop: 100 }}>
+        <h1 className="sr-only">About Agentic Day — Where AI meets capital</h1>
         <About />
       </main>
       <Footer />

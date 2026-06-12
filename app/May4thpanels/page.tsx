@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 // Speaker type
 type Speaker = {
   avatar: string;
@@ -144,7 +146,7 @@ export default function May4thPanelsPage() {
               className="panel-thumb"
               onClick={(e) => { if (!panel.videoUrl) { e.preventDefault(); alert('Video coming soon: ' + panel.title); } }}
             >
-              <img src={panel.thumbnail} alt={panel.title} />
+              <Image src={panel.thumbnail} alt={panel.title} width={640} height={360} sizes="(max-width: 700px) 100vw, 50vw" />
               {!panel.videoUrl && <span className="coming-soon">Coming Soon</span>}
             </a>
             <div className="panel-body">
@@ -152,7 +154,7 @@ export default function May4thPanelsPage() {
               <div className="speakers-list">
                 {panel.speakers.map((s, sIdx) => (
                   <div key={sIdx} className="speaker-row">
-                    <div className="avatar"><img src={s.avatar} alt={s.name} /></div>
+                    <div className="avatar"><Image src={s.avatar} alt={s.name} width={64} height={64} /></div>
                     <div className="info">
                       <div className="name">
                         {s.isModerator && <span className="moderator-tag">Mod</span>}

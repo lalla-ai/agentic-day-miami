@@ -13,6 +13,7 @@ export default function PartnersPage() {
     <>
       <Nav />
       <main style={{ paddingTop: 40 }}>
+        <h1 className="sr-only">Partners of Agentic Day — Sponsors, Community Partners, and Media Partners</h1>
         <Partners />
       </main>
       <Footer />
