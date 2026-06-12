@@ -89,13 +89,22 @@ export default function Partners() {
             <LogoCell logo="/images/community/miami_fintech_club.png"           name="Miami-Dubai Chamber"                                    square />
             <LogoCell logo="/images/community/miami_dade_beacon_council_real.png" name="Miami-Dade Beacon Council" url="https://www.beaconcouncil.com/" square />
             <LogoCell logo="/images/community/shefi_real.png"                    name="SheFi"                      url="https://www.shefi.org/" />
+            <LogoCell logo="/images/community/miami_dade_college.png"            name="Miami Dade College"         url="https://www.mdc.edu/" />
+            <LogoCell logo="/images/community/blockchain_futurist.svg"           name="Blockchain Futurist Conference" url="https://futuristconference.com/" />
+            <LogoCell logo="/images/community/ai4purpose.png"                    name="AI4Purpose"                 url="https://ai4purpose.com/" />
           </div>
         </div>
 
         {/* Media Partners */}
         <div id="media" className="partner-tier reveal">
           <div className="partner-tier-title">— Media Partners —</div>
-          <p style={{ textAlign: "center", color: "var(--ink-dim)", fontSize: 14, padding: "24px 0" }}>Coming soon</p>
+          <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
+            <LogoCell logo="/images/media/luna_pr.png"      name="Luna PR"      url="https://www.lunapr.io/" />
+            <LogoCell logo="/images/media/mindo_ai.png"     name="Mindo AI"     url="https://mindo.ai/" />
+            <LogoCell logo="/images/media/cryptoevents.png" name="CryptoEvents" url="https://cryptoevents.global/" />
+            <LogoCell logo="/images/media/yellow.webp"      name="Yellow"       url="https://www.yellow.com/" />
+            <LogoCell logo="/images/media/cryptonomads.jpg" name="CryptoNomads" url="https://cryptonomads.org/" square />
+          </div>
         </div>
 
       </div>
