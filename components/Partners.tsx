@@ -14,7 +14,7 @@ const SPONSORS = [
 // Container — flex centers the logo; every logo gets the same visual height
 const SLOT: React.CSSProperties = {
   width: "100%",
-  height: 100,
+  height: 140,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -23,9 +23,9 @@ const SLOT: React.CSSProperties = {
 // Every logo renders at the same TARGET HEIGHT regardless of source aspect ratio.
 // Width auto-scales to keep aspect; max-width caps very wide marks.
 const IMG: React.CSSProperties = {
-  height: 72,
+  height: 100,
   width: "auto",
-  maxWidth: 200,
+  maxWidth: 260,
   objectFit: "contain" as const,
   mixBlendMode: "multiply" as const,
   display: "block",
