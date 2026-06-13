@@ -101,7 +101,7 @@ export default function Partners() {
             <LogoCell logo="/images/community/shefi_real.png"                    name="SheFi"                      url="https://www.shefi.org/" />
             <LogoCell logo="/images/community/miami_dade_college.png"            name="Miami Dade College"         url="https://www.mdc.edu/" />
             <LogoCell logo="/images/community/blockchain_futurist.svg"           name="Blockchain Futurist Conference" url="https://futuristconference.com/" />
-            <LogoCell logo="/images/community/ai4purpose.png"                    name="AI4Purpose"                 url="https://ai4purpose.com/" boostXl />
+            <LogoCell logo="/images/community/ai4purpose.png"                    name="AI4Purpose"                 url="https://ai4purpose.com/" />
             <LogoCell logo="/images/community/business_show.png"                 name="The Business Show US"       url="https://thebusinessshowus.com/" />
           </div>
         </div>
