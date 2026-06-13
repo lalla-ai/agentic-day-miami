@@ -31,14 +31,17 @@ const IMG: React.CSSProperties = {
   display: "block",
 };
 
-// `square` legacy prop ignored. Pass `invert` for dark-on-light PNGs/JPGs.
-// Pass `boost` to scale logos that have heavy internal whitespace in the source PNG
-// (e.g., Miami Fintech Club, Miami-Dubai Chamber, Miami-Dade Beacon Council).
-function LogoCell({ logo, name, url, invert, boost }: { logo: string; name: string; url?: string; square?: boolean; invert?: boolean; boost?: boolean }) {
+// `square` legacy prop ignored.
+// `invert`  — flips light-on-dark marks (CryptoNomads) AND aggressively washes out
+//             noisy backgrounds via contrast+brightness so only the text remains.
+// `boost`   — scales padded logos up so they match tightly-cropped marks.
+// `shrink`  — scales tightly-cropped marks down (e.g., LUNA PR) to match SheFi-size.
+function LogoCell({ logo, name, url, invert, boost, shrink }: { logo: string; name: string; url?: string; square?: boolean; invert?: boolean; boost?: boolean; shrink?: boolean }) {
   const slot = SLOT;
   let imgStyle: React.CSSProperties = IMG;
-  if (invert) imgStyle = { ...imgStyle, filter: "invert(1)" };
+  if (invert) imgStyle = { ...imgStyle, filter: "invert(1) brightness(1.15) contrast(1.4)" };
   if (boost) imgStyle = { ...imgStyle, transform: "scale(1.8)", transformOrigin: "center" };
+  if (shrink) imgStyle = { ...imgStyle, transform: "scale(0.65)", transformOrigin: "center" };
   const img = (
     <div style={slot}>
       <Image src={logo} alt={name} width={300} height={200} style={imgStyle} />
@@ -82,7 +85,7 @@ export default function Partners() {
           <div className="partner-tier-title">— Sponsors —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
             {SPONSORS.map((s) => (
-              <LogoCell key={s.name} logo={s.logo} name={s.name} url={s.url} square={s.name === "AMAI"} />
+              <LogoCell key={s.name} logo={s.logo} name={s.name} url={s.url} boost={s.name === "AMAI"} />
             ))}
           </div>
         </div>
@@ -106,11 +109,11 @@ export default function Partners() {
         <div id="media" className="partner-tier reveal">
           <div className="partner-tier-title">— Media Partners —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
-            <LogoCell logo="/images/media/luna_pr.png"      name="Luna PR"      url="https://www.lunapr.io/" />
-            <LogoCell logo="/images/media/mindo_ai.png"     name="Mindo AI"     url="https://mindo.ai/" />
-            <LogoCell logo="/images/media/cryptoevents.png" name="CryptoEvents" url="https://cryptoevents.global/" />
-            <LogoCell logo="/images/media/yellow.webp"      name="Yellow"       url="https://www.yellow.com/" />
-            <LogoCell logo="/images/media/cryptonomads.jpg" name="CryptoNomads" url="https://cryptonomads.org/" invert />
+            <LogoCell logo="/images/media/luna_pr.png"      name="Luna PR"      url="https://www.lunapr.io/" shrink />
+            <LogoCell logo="/images/media/mindo_ai.png"     name="Mindo AI"     url="https://mindo.ai/" boost />
+            <LogoCell logo="/images/media/cryptoevents.png" name="CryptoEvents" url="https://cryptoevents.global/" boost />
+            <LogoCell logo="/images/media/yellow.webp"      name="Yellow"       url="https://www.yellow.com/" boost />
+            <LogoCell logo="/images/media/cryptonomads.jpg" name="CryptoNomads" url="https://cryptonomads.org/" invert boost />
           </div>
         </div>
 
