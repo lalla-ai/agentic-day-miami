@@ -23,20 +23,22 @@ const SLOT: React.CSSProperties = {
 // Every logo renders at the same TARGET HEIGHT regardless of source aspect ratio.
 // Width auto-scales to keep aspect; max-width caps very wide marks.
 const IMG: React.CSSProperties = {
-  height: 60,
+  height: 52,
   width: "auto",
-  maxWidth: 180,
+  maxWidth: 150,
   objectFit: "contain" as const,
   mixBlendMode: "multiply" as const,
   display: "block",
 };
 
-// `square` legacy prop ignored — all logos use the same fixed-height slot
-function LogoCell({ logo, name, url }: { logo: string; name: string; url?: string; square?: boolean }) {
+// `square` legacy prop ignored. Pass `invert` for dark-on-light PNGs/JPGs
+// where the source is light-on-dark (e.g., CryptoNomads — white text on black).
+function LogoCell({ logo, name, url, invert }: { logo: string; name: string; url?: string; square?: boolean; invert?: boolean }) {
   const slot = SLOT;
+  const imgStyle = invert ? { ...IMG, filter: "invert(1)" } : IMG;
   const img = (
     <div style={slot}>
-      <Image src={logo} alt={name} width={300} height={200} style={IMG} />
+      <Image src={logo} alt={name} width={300} height={200} style={imgStyle} />
     </div>
   );
   return (
@@ -93,6 +95,7 @@ export default function Partners() {
             <LogoCell logo="/images/community/miami_dade_college.png"            name="Miami Dade College"         url="https://www.mdc.edu/" />
             <LogoCell logo="/images/community/blockchain_futurist.svg"           name="Blockchain Futurist Conference" url="https://futuristconference.com/" />
             <LogoCell logo="/images/community/ai4purpose.png"                    name="AI4Purpose"                 url="https://ai4purpose.com/" />
+            <LogoCell logo="/images/community/business_show.png"                 name="The Business Show US"       url="https://thebusinessshowus.com/" />
           </div>
         </div>
 
@@ -104,7 +107,7 @@ export default function Partners() {
             <LogoCell logo="/images/media/mindo_ai.png"     name="Mindo AI"     url="https://mindo.ai/" />
             <LogoCell logo="/images/media/cryptoevents.png" name="CryptoEvents" url="https://cryptoevents.global/" />
             <LogoCell logo="/images/media/yellow.webp"      name="Yellow"       url="https://www.yellow.com/" />
-            <LogoCell logo="/images/media/cryptonomads.jpg" name="CryptoNomads" url="https://cryptonomads.org/" square />
+            <LogoCell logo="/images/media/cryptonomads.jpg" name="CryptoNomads" url="https://cryptonomads.org/" invert />
           </div>
         </div>
 
