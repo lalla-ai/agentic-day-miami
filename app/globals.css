@@ -136,9 +136,10 @@ h1.headline .row { display: block; }
 .meta-line {
   display: flex; align-items: center; justify-content: center;
   flex-wrap: wrap; gap: 14px;
-  font-size: clamp(15px, 1.4vw, 19px);
+  font-size: clamp(20px, 2.2vw, 32px);
   color: var(--ink); font-weight: 500;
-  margin-bottom: 32px;
+  letter-spacing: -0.01em;
+  margin-bottom: 40px;
 }
 .meta-line .dot {
   width: 7px; height: 7px; border-radius: 50%;
