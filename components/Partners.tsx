@@ -31,11 +31,14 @@ const IMG: React.CSSProperties = {
   display: "block",
 };
 
-// `square` legacy prop ignored. Pass `invert` for dark-on-light PNGs/JPGs
-// where the source is light-on-dark (e.g., CryptoNomads — white text on black).
-function LogoCell({ logo, name, url, invert }: { logo: string; name: string; url?: string; square?: boolean; invert?: boolean }) {
+// `square` legacy prop ignored. Pass `invert` for dark-on-light PNGs/JPGs.
+// Pass `boost` to scale logos that have heavy internal whitespace in the source PNG
+// (e.g., Miami Fintech Club, Miami-Dubai Chamber, Miami-Dade Beacon Council).
+function LogoCell({ logo, name, url, invert, boost }: { logo: string; name: string; url?: string; square?: boolean; invert?: boolean; boost?: boolean }) {
   const slot = SLOT;
-  const imgStyle = invert ? { ...IMG, filter: "invert(1)" } : IMG;
+  let imgStyle: React.CSSProperties = IMG;
+  if (invert) imgStyle = { ...imgStyle, filter: "invert(1)" };
+  if (boost) imgStyle = { ...imgStyle, transform: "scale(1.8)", transformOrigin: "center" };
   const img = (
     <div style={slot}>
       <Image src={logo} alt={name} width={300} height={200} style={imgStyle} />
@@ -88,9 +91,9 @@ export default function Partners() {
         <div id="community" className="partner-tier reveal">
           <div className="partner-tier-title">— Community Partners —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
-            <LogoCell logo="/images/community/miami_dubai_chamber.png"          name="Miami Fintech Club"        url="https://www.miamifintechclub.com/" square />
-            <LogoCell logo="/images/community/miami_fintech_club.png"           name="Miami-Dubai Chamber"                                    square />
-            <LogoCell logo="/images/community/miami_dade_beacon_council_real.png" name="Miami-Dade Beacon Council" url="https://www.beaconcouncil.com/" square />
+            <LogoCell logo="/images/community/miami_dubai_chamber.png"          name="Miami Fintech Club"        url="https://www.miamifintechclub.com/" boost />
+            <LogoCell logo="/images/community/miami_fintech_club.png"           name="Miami-Dubai Chamber"                                    boost />
+            <LogoCell logo="/images/community/miami_dade_beacon_council_real.png" name="Miami-Dade Beacon Council" url="https://www.beaconcouncil.com/" boost />
             <LogoCell logo="/images/community/shefi_real.png"                    name="SheFi"                      url="https://www.shefi.org/" />
             <LogoCell logo="/images/community/miami_dade_college.png"            name="Miami Dade College"         url="https://www.mdc.edu/" />
             <LogoCell logo="/images/community/blockchain_futurist.svg"           name="Blockchain Futurist Conference" url="https://futuristconference.com/" />
