@@ -4,10 +4,10 @@ import Image from "next/image";
 const SPONSORS = [
   { name: "WEEX Labs",          logo: "/images/sponsors/weex_labs_logo.svg", url: "https://www.weex.com/" },
   { name: "Cayman Finance",     logo: "/images/sponsors/cayman_finance.png", url: "https://www.caymanfinance.gov.ky/" },
-  { name: "Verdant Management", logo: "/images/sponsors/verdant_management.png" },
-  { name: "Shore Labs",         logo: "/images/sponsors/shore_labs.png" },
-  { name: "Aon",                logo: "/images/sponsors/aon.png",      url: "https://www.aon.com/" },
-  { name: "NXT Law",            logo: "/images/sponsors/nxt_law.png" },
+  { name: "Verdant Management", logo: "/images/sponsors/verdant_management.png", url: "https://verdantmgmt.com/" },
+  { name: "Shore Labs",         logo: "/images/sponsors/shore_labs.png",         url: "https://shorelabs.io/" },
+  { name: "Aon",                logo: "/images/sponsors/aon.png",                url: "https://www.aon.com/" },
+  { name: "NXT Law",            logo: "/images/sponsors/nxt_law.png",            url: "https://nxt.law/" },
   { name: "AMAI",               logo: "/images/sponsors/amai.png",     url: "https://allmyai.ai/" },
 ];
 
@@ -36,11 +36,12 @@ const IMG: React.CSSProperties = {
 //             noisy backgrounds via contrast+brightness so only the text remains.
 // `boost`   — scales padded logos up so they match tightly-cropped marks.
 // `shrink`  — scales tightly-cropped marks down (e.g., LUNA PR) to match SheFi-size.
-function LogoCell({ logo, name, url, invert, boost, shrink }: { logo: string; name: string; url?: string; square?: boolean; invert?: boolean; boost?: boolean; shrink?: boolean }) {
+function LogoCell({ logo, name, url, invert, boost, boostXl, shrink }: { logo: string; name: string; url?: string; square?: boolean; invert?: boolean; boost?: boolean; boostXl?: boolean; shrink?: boolean }) {
   const slot = SLOT;
   let imgStyle: React.CSSProperties = IMG;
   if (invert) imgStyle = { ...imgStyle, filter: "invert(1) brightness(1.15) contrast(1.4)" };
   if (boost) imgStyle = { ...imgStyle, transform: "scale(1.8)", transformOrigin: "center" };
+  if (boostXl) imgStyle = { ...imgStyle, transform: "scale(2.4)", transformOrigin: "center" };
   if (shrink) imgStyle = { ...imgStyle, transform: "scale(0.65)", transformOrigin: "center" };
   const img = (
     <div style={slot}>
@@ -85,7 +86,7 @@ export default function Partners() {
           <div className="partner-tier-title">— Sponsors —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
             {SPONSORS.map((s) => (
-              <LogoCell key={s.name} logo={s.logo} name={s.name} url={s.url} boost={s.name === "AMAI"} />
+              <LogoCell key={s.name} logo={s.logo} name={s.name} url={s.url} boostXl={s.name === "AMAI"} />
             ))}
           </div>
         </div>
@@ -95,12 +96,12 @@ export default function Partners() {
           <div className="partner-tier-title">— Community Partners —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
             <LogoCell logo="/images/community/miami_dubai_chamber.png"          name="Miami Fintech Club"        url="https://www.miamifintechclub.com/" boost />
-            <LogoCell logo="/images/community/miami_fintech_club.png"           name="Miami-Dubai Chamber"                                    boost />
-            <LogoCell logo="/images/community/miami_dade_beacon_council_real.png" name="Miami-Dade Beacon Council" url="https://www.beaconcouncil.com/" boost />
+            <LogoCell logo="/images/community/miami_fintech_club.png"           name="Miami-Dubai Chamber"       url="https://miamidubaichamber.com/" boost />
+            <LogoCell logo="/images/community/miami_dade_beacon_council_real.png" name="Miami-Dade Beacon Council" url="https://www.beaconcouncil.com/" boostXl />
             <LogoCell logo="/images/community/shefi_real.png"                    name="SheFi"                      url="https://www.shefi.org/" />
             <LogoCell logo="/images/community/miami_dade_college.png"            name="Miami Dade College"         url="https://www.mdc.edu/" />
             <LogoCell logo="/images/community/blockchain_futurist.svg"           name="Blockchain Futurist Conference" url="https://futuristconference.com/" />
-            <LogoCell logo="/images/community/ai4purpose.png"                    name="AI4Purpose"                 url="https://ai4purpose.com/" />
+            <LogoCell logo="/images/community/ai4purpose.png"                    name="AI4Purpose"                 url="https://ai4purpose.com/" boostXl />
             <LogoCell logo="/images/community/business_show.png"                 name="The Business Show US"       url="https://thebusinessshowus.com/" />
           </div>
         </div>
