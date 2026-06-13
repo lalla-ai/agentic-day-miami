@@ -4,6 +4,7 @@ import Image from "next/image";
 const SPONSORS = [
   { name: "WEEX Labs",          logo: "/images/sponsors/weex_labs_logo.svg", url: "https://www.weex.com/" },
   { name: "Cayman Finance",     logo: "/images/sponsors/cayman_finance.png", url: "https://www.caymanfinance.gov.ky/" },
+  { name: "BACI",               logo: "/images/sponsors/baci.png",           url: "https://caymanblockchain.org/" },
   { name: "Verdant Management", logo: "/images/sponsors/verdant_management.png", url: "https://verdantmgmt.com/" },
   { name: "Shore Labs",         logo: "/images/sponsors/shore_labs.png",         url: "https://shorelabs.io/" },
   { name: "Aon",                logo: "/images/sponsors/aon.png",                url: "https://www.aon.com/" },
