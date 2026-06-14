@@ -116,6 +116,7 @@ export default function Partners() {
             <LogoCell logo="/images/media/cryptoevents.png" name="CryptoEvents" url="https://cryptoevents.global/" boost />
             <LogoCell logo="/images/media/yellow.webp"      name="Yellow"       url="https://www.yellow.com/" boost />
             <LogoCell logo="/images/media/cryptonomads.jpg" name="CryptoNomads" url="https://cryptonomads.org/" invert boost />
+            <LogoCell logo="/images/media/times_of_ai.png"  name="Times Of AI"  url="https://www.timesofai.com/" boost />
           </div>
         </div>
 
