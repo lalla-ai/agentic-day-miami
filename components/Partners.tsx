@@ -104,6 +104,7 @@ export default function Partners() {
             <LogoCell logo="/images/community/blockchain_futurist.svg"           name="Blockchain Futurist Conference" url="https://futuristconference.com/" />
             <LogoCell logo="/images/community/ai4purpose.png"                    name="AI4Purpose"                 url="https://ai4purpose.com/" />
             <LogoCell logo="/images/community/business_show.png"                 name="The Business Show US"       url="https://thebusinessshowus.com/" />
+            <LogoCell logo="/images/community/crypto_women_collective.svg"       name="Crypto Women Collective"    url="https://www.cryptowomencollective.com/" />
           </div>
         </div>
 
@@ -114,7 +115,7 @@ export default function Partners() {
             <LogoCell logo="/images/media/luna_pr.png"      name="Luna PR"      url="https://www.lunapr.io/" shrink />
             <LogoCell logo="/images/media/mindo_ai.png"     name="Mindo AI"     url="https://mindo.ai/" boost />
             <LogoCell logo="/images/media/cryptoevents.png" name="CryptoEvents" url="https://cryptoevents.global/" boost />
-            <LogoCell logo="/images/media/yellow.png"       name="Yellow Media" url="https://www.yellow.com/" boost />
+            <LogoCell logo="/images/media/yellow.png"       name="Yellow Media" url="https://www.yellow.com/" />
             <LogoCell logo="/images/media/cryptonomads.jpg" name="CryptoNomads" url="https://cryptonomads.org/" invert boost />
             <LogoCell logo="/images/media/times_of_ai.png"  name="Times Of AI"  url="https://www.timesofai.com/" boost />
           </div>
