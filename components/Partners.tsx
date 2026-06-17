@@ -105,6 +105,7 @@ export default function Partners() {
             <LogoCell logo="/images/community/ai4purpose.png"                    name="AI4Purpose"                 url="https://ai4purpose.com/" />
             <LogoCell logo="/images/community/business_show.png"                 name="The Business Show US"       url="https://thebusinessshowus.com/" />
             <LogoCell logo="/images/community/crypto_women_collective.svg"       name="Crypto Women Collective"    url="https://www.cryptowomencollective.com/" />
+            <LogoCell logo="/images/community/cryptocanal.png"                   name="CryptoCanal"                url="https://cryptocanal.com/" invert />
           </div>
         </div>
 
