@@ -2099,6 +2099,72 @@ footer { background: #000; color: #fff; padding: 100px 0 40px; }
 /* Prevent body scroll when mobile menu is open */
 body.nav-open { overflow: hidden; }
 
+/* ============================================
+   MOBILE SWIPE CARDS
+   Speakers / Series / JoinCTA grids become
+   horizontal scroll-snap carousels on phones,
+   so users can swipe through cards instead of
+   scrolling a long vertical list.
+   ============================================ */
+@media (max-width: 700px) {
+  /* Speakers grid → horizontal swipe */
+  .speakers-grid-t2049 {
+    display: grid !important;
+    grid-template-columns: none !important;
+    grid-auto-flow: column;
+    grid-auto-columns: 78vw;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    padding: 4px 20px 24px;
+    margin: 0 -20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .speakers-grid-t2049::-webkit-scrollbar { display: none; }
+  .speaker-card-t2049 { scroll-snap-align: start; }
+
+  /* Series cards (Three editions) → horizontal swipe */
+  .series-grid {
+    display: grid !important;
+    grid-template-columns: none !important;
+    grid-auto-flow: column;
+    grid-auto-columns: 82vw;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    padding: 4px 20px 24px;
+    margin: 0 -20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .series-grid::-webkit-scrollbar { display: none; }
+  .series-card { scroll-snap-align: start; }
+
+  /* "Be part of the next one" cards → horizontal swipe */
+  .partner-cta {
+    display: grid !important;
+    grid-template-columns: none !important;
+    grid-auto-flow: column;
+    grid-auto-columns: 82vw;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    padding: 4px 20px 24px;
+    margin: 0 -20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .partner-cta::-webkit-scrollbar { display: none; }
+  .involved-card { scroll-snap-align: start; }
+}
+
 /* Screen-reader only — visually hidden but accessible to assistive tech + SEO */
 .sr-only {
   position: absolute;
