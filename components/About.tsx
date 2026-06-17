@@ -13,7 +13,7 @@ export default function About() {
           <div className="about-body reveal">
             <p>One afternoon. One room. The right people. No open registration. No filler content. Just high-signal conversations, real deal flow, and the connections that move industries forward.</p>
             <p>The program features keynotes, panels, founder presentations, and fireside conversations focused on the real-world application of agentic systems.</p>
-            <p>Three editions. One mission. Europe is next — <strong>Agentic Day Amsterdam</strong>, June 22, 2026.</p>
+            <p>Three editions. One mission. Europe is next — <strong>Agentic Day Amsterdam</strong>, June 22, 2026. Then North — <strong>Agentic Day Toronto</strong>, July 21 at the Blockchain Futurist Conference.</p>
           </div>
         </div>
       </div>
