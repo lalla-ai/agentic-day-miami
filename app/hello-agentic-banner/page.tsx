@@ -157,14 +157,15 @@ export default function HelloAgenticBannerPage() {
               fontSize: "168mm",
               fontWeight: 800,
               letterSpacing: "-0.05em",
-              lineHeight: 0.88,
+              lineHeight: 1.02,
               margin: 0,
               color: INK,
+              padding: "10mm 0 30mm",
             }}
           >
             Deploy agents.
             <br />
-            <span style={{ color: BRAND }}>Own the foundation.</span>
+            <span style={{ color: BRAND, display: "inline-block", padding: "8mm 0 14mm" }}>Own the foundation.</span>
           </h1>
           <p
             style={{
@@ -173,7 +174,7 @@ export default function HelloAgenticBannerPage() {
               color: MUTED,
               maxWidth: "640mm",
               lineHeight: 1.4,
-              margin: "30mm auto 0",
+              margin: "20mm auto 0",
             }}
           >
             Production-ready agentic AI systems — sovereign, secure, and costed to the cent.
@@ -320,11 +321,12 @@ export default function HelloAgenticBannerPage() {
           </div>
           <div
             style={{
-              fontSize: "11mm",
-              color: MUTED,
-              letterSpacing: "0.18em",
-              marginTop: "10mm",
-              fontWeight: 500,
+              fontSize: "18mm",
+              color: INK,
+              letterSpacing: "0.28em",
+              marginTop: "14mm",
+              fontWeight: 800,
+              textTransform: "uppercase",
             }}
           >
             Blueprint · Build · Operate
