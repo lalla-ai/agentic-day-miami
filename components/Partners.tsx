@@ -87,7 +87,7 @@ export default function Partners() {
           <div className="partner-tier-title">— Sponsors —</div>
           <div className="partner-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
             {SPONSORS.map((s) => (
-              <LogoCell key={s.name} logo={s.logo} name={s.name} url={s.url} boostXl={s.name === "AMAI"} boost={s.name === "BACI"} invert={s.name === "BACI"} />
+              <LogoCell key={s.name} logo={s.logo} name={s.name} url={s.url} boostXl={s.name === "AMAI"} invert={s.name === "BACI"} />
             ))}
           </div>
         </div>
