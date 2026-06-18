@@ -209,8 +209,8 @@ export default function PopupBannerPage() {
         >
           <div
             style={{
-              fontSize: "10mm",
-              color: "rgba(255,255,255,0.45)",
+              fontSize: "16mm",
+              color: "rgba(255,255,255,0.65)",
               letterSpacing: "0.32em",
               textTransform: "uppercase",
               fontWeight: 700,
@@ -218,10 +218,10 @@ export default function PopupBannerPage() {
           >
             Follow the room
           </div>
-          <div style={{ display: "flex", gap: "20mm", alignItems: "center" }}>
+          <div style={{ display: "flex", gap: "18mm", alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
             <SocialPill
               icon={
-                <svg viewBox="0 0 24 24" fill="#fff" style={{ width: "16mm", height: "16mm" }}>
+                <svg viewBox="0 0 24 24" fill="#fff" style={{ width: "22mm", height: "22mm" }}>
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               }
@@ -229,7 +229,7 @@ export default function PopupBannerPage() {
             />
             <SocialPill
               icon={
-                <svg viewBox="0 0 24 24" fill="#fff" style={{ width: "16mm", height: "16mm" }}>
+                <svg viewBox="0 0 24 24" fill="#fff" style={{ width: "22mm", height: "22mm" }}>
                   <path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.75-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" />
                 </svg>
               }
@@ -237,7 +237,7 @@ export default function PopupBannerPage() {
             />
             <SocialPill
               icon={
-                <svg viewBox="0 0 24 24" fill="#fff" style={{ width: "16mm", height: "16mm" }}>
+                <svg viewBox="0 0 24 24" fill="#fff" style={{ width: "22mm", height: "22mm" }}>
                   <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" />
                 </svg>
               }
@@ -246,10 +246,11 @@ export default function PopupBannerPage() {
           </div>
           <div
             style={{
-              fontSize: "7mm",
-              color: "rgba(255,255,255,0.30)",
+              fontSize: "11mm",
+              color: "rgba(255,255,255,0.55)",
               letterSpacing: "0.18em",
-              marginTop: "8mm",
+              marginTop: "12mm",
+              fontWeight: 500,
             }}
           >
             Presented by Hello Agentic · pr@helloagentic.ai
@@ -266,15 +267,15 @@ function SocialPill({ icon, label }: { icon: React.ReactNode; label: string }) {
       style={{
         display: "inline-flex",
         alignItems: "center",
-        gap: "8mm",
-        padding: "10mm 16mm",
-        background: "rgba(255,255,255,0.06)",
-        border: "1mm solid rgba(255,255,255,0.18)",
+        gap: "10mm",
+        padding: "14mm 22mm",
+        background: "rgba(255,255,255,0.08)",
+        border: "1.2mm solid rgba(255,255,255,0.28)",
         borderRadius: "999mm",
       }}
     >
       {icon}
-      <span style={{ fontSize: "14mm", fontWeight: 600, color: "#fff", letterSpacing: "-0.01em" }}>
+      <span style={{ fontSize: "20mm", fontWeight: 700, color: "#fff", letterSpacing: "-0.01em" }}>
         {label}
       </span>
     </div>
