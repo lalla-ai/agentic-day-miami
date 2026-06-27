@@ -1014,17 +1014,18 @@ h1.headline .row { display: block; }
   margin: 0 0 48px;
 }
 .partner-cta {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
   align-items: stretch;
 }
 @media (max-width: 700px) { .partner-cta { grid-template-columns: 1fr; } }
 .involved-card {
-  aspect-ratio: 8 / 5; border-radius: 24px;
+  min-height: 300px; border-radius: 20px;
   position: relative; overflow: hidden; padding: 30px;
   display: flex; flex-direction: column; justify-content: space-between;
-  transition: transform 0.3s ease;
-  color: #fff; cursor: pointer;
-  box-shadow: 0 10px 30px rgba(14, 17, 23, 0.10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #fff; cursor: pointer; text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 34px 80px -50px rgba(14, 17, 23, 0.55);
 }
 .involved-card:hover { transform: translateY(-4px); }
 .involved-card.invite {
@@ -1054,8 +1055,8 @@ h1.headline .row { display: block; }
 }
 .involved-headline {
   position: relative; z-index: 3;
-  font-size: clamp(28px, 2.8vw, 44px); font-weight: 800;
-  letter-spacing: -0.025em; line-height: 1.0; color: #fff;
+  font-size: clamp(1.8rem, 2.6vw, 2.25rem); font-weight: 800;
+  letter-spacing: -0.025em; line-height: 1.04; color: #fff;
 }
 .involved-headline .row { display: block; }
 .involved-cta {
