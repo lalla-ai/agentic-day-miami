@@ -9,11 +9,7 @@ export default function Hero() {
           <span className="row">meets capital</span>
         </h1>
         <div className="meta-line">
-          <span>The AI Investment &amp; Infrastructure Summit</span>
-          <span className="dot" />
-          <span>June 22, 2026</span>
-          <span className="dot" />
-          <span>Amsterdam</span>
+          <span>The AI Infrastructure & Investment Summit</span>
         </div>
         <div className="hero-cta-row" style={{ marginBottom: 0 }}>
           <a
