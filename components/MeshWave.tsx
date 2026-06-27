@@ -1,85 +1,80 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-
+/**
+ * Soft violet/iridescent wisp ribbon at the bottom of the Hero.
+ * Replaces the previous green-dot perspective grid with a SuperAI-style
+ * blurred gradient ribbon. Pure SVG + CSS, lightweight, gently animated.
+ */
 export default function MeshWave() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  return (
+    <div className="wisp-wrap" aria-hidden="true">
+      <svg
+        viewBox="0 0 1600 480"
+        preserveAspectRatio="xMidYMax slice"
+        className="wisp-svg"
+      >
+        <defs>
+          {/* Main violet gradient — left to right */}
+          <linearGradient id="wispMain" x1="0%" y1="0%" x2="100%" y2="50%">
+            <stop offset="0%" stopColor="#c9c4ff" />
+            <stop offset="35%" stopColor="#a78bfa" />
+            <stop offset="65%" stopColor="#7c5cff" />
+            <stop offset="100%" stopColor="#b794f6" />
+          </linearGradient>
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+          {/* Iridescent rim — cyan/magenta edge highlight */}
+          <linearGradient id="wispRim" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#a5f3fc" stopOpacity="0.65" />
+            <stop offset="100%" stopColor="#f0abfc" stopOpacity="0.55" />
+          </linearGradient>
 
-    let width = 0;
-    let height = 0;
-    let dpr = 1;
+          {/* Soft ground glow */}
+          <radialGradient id="wispGlow" cx="50%" cy="100%" r="60%">
+            <stop offset="0%" stopColor="#a78bfa" stopOpacity="0.45" />
+            <stop offset="100%" stopColor="#a78bfa" stopOpacity="0" />
+          </radialGradient>
 
-    function resize() {
-      if (!canvas || !ctx) return;
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      const rect = canvas.getBoundingClientRect();
-      width = rect.width;
-      height = rect.height;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-    resize();
-    window.addEventListener("resize", resize);
+          <filter id="wispBlur" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="6" />
+          </filter>
+        </defs>
 
-    const COLS = 90;
-    const ROWS = 26;
-    const DOT_BASE = 1.2;
-    const PERSPECTIVE = 0.65;
-    const SPEED = 0.014;
+        <rect x="0" y="0" width="1600" height="480" fill="url(#wispGlow)" />
 
-    let t = 0;
-    let raf = 0;
+        {/* Back ribbon (softer, blurred) */}
+        <path
+          d="M -80 380
+             C 200 260, 420 460, 720 360
+             C 1020 260, 1200 440, 1480 320
+             C 1640 260, 1700 360, 1700 420
+             L 1700 520 L -80 520 Z"
+          fill="url(#wispMain)"
+          opacity="0.7"
+          filter="url(#wispBlur)"
+        />
 
-    function draw() {
-      if (!ctx) return;
-      ctx.clearRect(0, 0, width, height);
+        {/* Front ribbon (sharper) */}
+        <path
+          d="M -80 410
+             C 240 320, 500 480, 820 400
+             C 1100 340, 1260 470, 1500 380
+             C 1640 340, 1700 400, 1700 460
+             L 1700 540 L -80 540 Z"
+          fill="url(#wispMain)"
+          opacity="0.9"
+        />
 
-      for (let r = ROWS - 1; r >= 0; r--) {
-        const depth = r / (ROWS - 1);
-        const yBase = height * (1 - Math.pow(depth, PERSPECTIVE));
-
-        for (let c = 0; c < COLS; c++) {
-          const xRatio = c / (COLS - 1);
-          const x = xRatio * width;
-
-          const wave1 = Math.sin(xRatio * 2.4 + t * 1.4 + depth * 1.2) * 60;
-          const wave2 = Math.sin(xRatio * 5.8 - t * 1.9 + depth * 2.6) * 22;
-          const wave3 = Math.sin(xRatio * 1.2 + t * 0.7 - depth * 0.6) * 35;
-          const yOffset = (wave1 + wave2 + wave3) * (0.3 + depth * 0.7);
-
-          const y = yBase + yOffset;
-          if (y < -20 || y > height + 20) continue;
-
-          const size = DOT_BASE * (0.35 + depth * 1.5);
-          const alpha = 0.12 + depth * 0.78;
-          const edgeFade = Math.sin(xRatio * Math.PI);
-          const greenBoost = 124 + Math.floor(edgeFade * 30);
-
-          ctx.fillStyle = `rgba(${Math.floor(124 + edgeFade * 20)}, ${greenBoost + 70}, 66, ${alpha})`;
-          ctx.beginPath();
-          ctx.arc(x, y, size, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
-
-      t += SPEED;
-      raf = requestAnimationFrame(draw);
-    }
-
-    draw();
-
-    return () => {
-      window.removeEventListener("resize", resize);
-      cancelAnimationFrame(raf);
-    };
-  }, []);
-
-  return <canvas ref={canvasRef} className="mesh-canvas" />;
+        {/* Iridescent edge highlight */}
+        <path
+          d="M -40 405
+             C 240 320, 500 478, 820 398
+             C 1100 340, 1260 468, 1500 378"
+          stroke="url(#wispRim)"
+          strokeWidth="2.5"
+          fill="none"
+          opacity="0.8"
+        />
+      </svg>
+    </div>
+  );
 }
