@@ -127,19 +127,19 @@ nav.top ul a:hover { background: rgba(14, 17, 23, 0.05); }
 }
 @media (max-width: 700px) { .hero-content { padding: 0 20px; } }
 h1.headline {
-  font-size: clamp(48px, 7vw, 112px);
-  font-weight: 700; line-height: 1.04;
-  letter-spacing: -0.035em; margin-bottom: 24px;
+  font-size: clamp(50px, 10.4vw, 160px);
+  font-weight: 800; line-height: 0.92;
+  letter-spacing: -0.035em; margin-bottom: 26px;
   color: var(--ink);
 }
 h1.headline .row { display: block; }
 .meta-line {
   display: flex; align-items: center; justify-content: center;
   flex-wrap: wrap; gap: 14px;
-  font-size: clamp(16px, 1.4vw, 22px);
-  color: var(--ink); font-weight: 500;
+  font-size: clamp(17px, 2.4vw, 25px);
+  color: var(--ink-2); font-weight: 500;
   letter-spacing: -0.01em;
-  margin-bottom: 32px;
+  margin-bottom: 42px;
 }
 .meta-line .dot {
   width: 7px; height: 7px; border-radius: 50%;
