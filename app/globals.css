@@ -195,27 +195,6 @@ h1.headline .row { display: block; }
   width: 100%; height: 100%;
   display: block;
 }
-.wisp-wrap {
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  overflow: visible;
-}
-.wisp-svg {
-  position: absolute;
-  bottom: -10%;
-  left: -5%;
-  width: 110%;
-  height: 130%;
-  display: block;
-  animation: wisp-drift 16s ease-in-out infinite alternate;
-}
-@keyframes wisp-drift {
-  0%   { transform: translate3d(0, 0, 0)     scale(1);    }
-  50%  { transform: translate3d(1%, -1%, 0)  scale(1.02); }
-  100% { transform: translate3d(-1%, 0, 0)   scale(1);    }
-}
 
 /* STATS */
 .stats { background: var(--bg); padding: 40px 0 100px; position: relative; z-index: 4; }
