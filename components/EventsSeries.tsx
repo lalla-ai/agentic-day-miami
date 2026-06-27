@@ -66,10 +66,10 @@ export default function EventsSeries() {
             </div>
           </article>
 
-          {/* AMSTERDAM — highlighted */}
-          <article className="series-card series-card-amsterdam series-card-highlight reveal">
+          {/* AMSTERDAM */}
+          <article className="series-card series-card-amsterdam reveal">
             <div className="series-card-top series-top-amsterdam">
-              <span className="series-tag series-tag-pill">Up Next</span>
+              <span className="series-tag">Past · Recap</span>
               <div className="series-city">Amsterdam</div>
             </div>
             <div className="series-card-body">
@@ -83,17 +83,17 @@ export default function EventsSeries() {
                 href="https://luma.com/lo977l6h"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="series-cta series-cta-bright"
+                className="series-cta"
               >
-                REGISTER / REQUEST INVITE →
+                WATCH THE RECAP →
               </a>
             </div>
           </article>
 
-          {/* TORONTO */}
-          <article className="series-card series-card-toronto reveal">
+          {/* TORONTO — highlighted (Up Next) */}
+          <article className="series-card series-card-toronto series-card-highlight reveal">
             <div className="series-card-top series-top-toronto">
-              <span className="series-tag">Upcoming</span>
+              <span className="series-tag series-tag-pill">Up Next</span>
               <div className="series-city">Toronto</div>
             </div>
             <div className="series-card-body">
@@ -107,9 +107,9 @@ export default function EventsSeries() {
                 href="https://luma.com/Agentic_AI_Day"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="series-cta"
+                className="series-cta series-cta-bright"
               >
-                CONFERENCE INFO →
+                REGISTER / REQUEST INVITE →
               </a>
             </div>
           </article>
