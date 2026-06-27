@@ -46,7 +46,7 @@ const SPEAKERS: Speaker[] = [
   { name: "Kelly H. Zou", title: "CEO", company: "AI4Purpose", photo: "/images/speakers/Kelly_H_Zou.jpg", linkedin: "https://www.linkedin.com/in/kelly-h-zou-phd-pstat-fasa-97307b16/" },
   { name: "Alex Styhar", title: "CEO", company: "Mindo AI", photo: "/images/speakers/Alex_Styhar.png" },
   { name: "Wayne Liu", title: "CGO", company: "Perfect Corp.", photo: "/images/speakers/Wayne_Liu.png", linkedin: "https://www.linkedin.com/in/wayneliu88/" },
-  { name: "Lalla Asmaa Alaoui", title: "Founder", company: "allmyai.ai & Agentic Day Summit", photo: "/images/speakers/Lalla_Asmaa_Alaoui.jpg", role: "Host" },
+  { name: "Lalla Asmaa Alaoui", title: "Founder Agentic Day", company: "", photo: "/images/speakers/Lalla_Asmaa_Alaoui.jpg", role: "Host" },
 ];
 
 export default function SpeakersPage() {
