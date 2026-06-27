@@ -1,80 +1,94 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
 /**
- * Soft violet/iridescent wisp ribbon at the bottom of the Hero.
- * Replaces the previous green-dot perspective grid with a SuperAI-style
- * blurred gradient ribbon. Pure SVG + CSS, lightweight, gently animated.
+ * Signature green-dot wave — exact algorithm from the original
+ * index-18 reference. A 7px grid of #7CC242 dots fills the area
+ * below an organic wavy boundary produced by three overlapping sines.
+ * Density grows toward the bottom; edges soften with sin(nx * π).
  */
 export default function MeshWave() {
-  return (
-    <div className="wisp-wrap" aria-hidden="true">
-      <svg
-        viewBox="0 0 1600 480"
-        preserveAspectRatio="xMidYMax slice"
-        className="wisp-svg"
-      >
-        <defs>
-          {/* Main violet gradient — left to right */}
-          <linearGradient id="wispMain" x1="0%" y1="0%" x2="100%" y2="50%">
-            <stop offset="0%" stopColor="#c9c4ff" />
-            <stop offset="35%" stopColor="#a78bfa" />
-            <stop offset="65%" stopColor="#7c5cff" />
-            <stop offset="100%" stopColor="#b794f6" />
-          </linearGradient>
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-          {/* Iridescent rim — cyan/magenta edge highlight */}
-          <linearGradient id="wispRim" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#a5f3fc" stopOpacity="0.65" />
-            <stop offset="100%" stopColor="#f0abfc" stopOpacity="0.55" />
-          </linearGradient>
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
-          {/* Soft ground glow */}
-          <radialGradient id="wispGlow" cx="50%" cy="100%" r="60%">
-            <stop offset="0%" stopColor="#a78bfa" stopOpacity="0.45" />
-            <stop offset="100%" stopColor="#a78bfa" stopOpacity="0" />
-          </radialGradient>
+    const GAP = 7;
+    const DOT = 1.15;
+    let W = 0;
+    let H = 0;
+    let dpr = 1;
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-          <filter id="wispBlur" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="6" />
-          </filter>
-        </defs>
+    function resize() {
+      if (!canvas || !ctx) return;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = canvas.clientWidth;
+      H = canvas.clientHeight;
+      canvas.width = Math.floor(W * dpr);
+      canvas.height = Math.floor(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
 
-        <rect x="0" y="0" width="1600" height="480" fill="url(#wispGlow)" />
+    function draw(time: number) {
+      if (!ctx) return;
+      const t = time * 0.00018;
+      ctx.clearRect(0, 0, W, H);
 
-        {/* Back ribbon (softer, blurred) */}
-        <path
-          d="M -80 380
-             C 200 260, 420 460, 720 360
-             C 1020 260, 1200 440, 1480 320
-             C 1640 260, 1700 360, 1700 420
-             L 1700 520 L -80 520 Z"
-          fill="url(#wispMain)"
-          opacity="0.7"
-          filter="url(#wispBlur)"
-        />
+      for (let x = 0; x <= W; x += GAP) {
+        const nx = x / W;
+        const wave =
+          Math.sin(nx * 3.1 + 1.4) * 0.115 +
+          Math.sin(nx * 6.283 + t) * 0.055 +
+          Math.sin(nx * 11.0 - t * 0.5) * 0.024;
+        const boundary = H * (0.26 + wave);
 
-        {/* Front ribbon (sharper) */}
-        <path
-          d="M -80 410
-             C 240 320, 500 480, 820 400
-             C 1100 340, 1260 470, 1500 380
-             C 1640 340, 1700 400, 1700 460
-             L 1700 540 L -80 540 Z"
-          fill="url(#wispMain)"
-          opacity="0.9"
-        />
+        for (let y = 0; y <= H; y += GAP) {
+          if (y < boundary) continue;
+          const below = y - boundary;
+          let a = Math.min(below / (H * 0.42), 1) * 0.7;
+          a *= 0.55 + 0.45 * Math.sin(Math.min(Math.max(nx, 0), 1) * Math.PI);
+          if (a <= 0.012) continue;
+          ctx.globalAlpha = a;
+          ctx.fillStyle = "#7CC242";
+          ctx.beginPath();
+          ctx.arc(x, y, DOT, 0, 6.283);
+          ctx.fill();
+        }
+      }
+      ctx.globalAlpha = 1;
+    }
 
-        {/* Iridescent edge highlight */}
-        <path
-          d="M -40 405
-             C 240 320, 500 478, 820 398
-             C 1100 340, 1260 468, 1500 378"
-          stroke="url(#wispRim)"
-          strokeWidth="2.5"
-          fill="none"
-          opacity="0.8"
-        />
-      </svg>
-    </div>
-  );
+    let raf = 0;
+    function loop(ts: number) {
+      draw(ts);
+      raf = requestAnimationFrame(loop);
+    }
+
+    resize();
+    if (reduce) {
+      draw(0);
+    } else {
+      raf = requestAnimationFrame(loop);
+    }
+
+    const onResize = () => {
+      resize();
+      if (reduce) draw(0);
+    };
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  return <canvas ref={canvasRef} className="mesh-canvas" />;
 }
