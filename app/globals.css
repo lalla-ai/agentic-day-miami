@@ -127,20 +127,23 @@ nav.top ul a:hover { background: rgba(14, 17, 23, 0.05); }
 }
 @media (max-width: 700px) { .hero-content { padding: 0 20px; } }
 h1.headline {
-  font-size: clamp(50px, 10.4vw, 160px);
+  font-size: clamp(3.1rem, 10.4vw, 10rem);
   font-weight: 800; line-height: 0.92;
-  letter-spacing: -0.035em; margin-bottom: 26px;
+  letter-spacing: -0.035em;
   color: var(--ink);
 }
 h1.headline .row { display: block; }
 .meta-line {
   display: flex; align-items: center; justify-content: center;
   flex-wrap: wrap; gap: 14px;
-  font-size: clamp(17px, 2.4vw, 25px);
-  color: var(--ink-2); font-weight: 500;
+  margin-top: 1.6rem;
+  font-size: clamp(1.05rem, 2.4vw, 1.55rem);
+  font-weight: 500;
+  color: var(--ink-2);
   letter-spacing: -0.01em;
-  margin-bottom: 42px;
+  margin-bottom: 0;
 }
+.hero-cta-row { margin-top: 2.6rem !important; }
 .meta-line .dot {
   width: 7px; height: 7px; border-radius: 50%;
   background: var(--accent); display: inline-block;
